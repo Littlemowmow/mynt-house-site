@@ -28,7 +28,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
 
   <style>
     /* ----------------------------------------------------------------
@@ -50,6 +50,10 @@
       --navy-mid:    #2D4A7A;
       --navy-lt:     #3D5A8A;
 
+      --maroon:      #6B1D2A;
+      --maroon-lt:   #8B2E3D;
+      --maroon-pale: #F2E4E7;
+
       --gold:        #C8A55A;
       --gold-lt:     #E8D5A0;
       --gold-pale:   #F5EDDA;
@@ -62,8 +66,8 @@
       --muted:       rgba(26,26,46,.45);
       --line:        rgba(200,165,90,.18);
 
-      --font-display: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
-      --font-body:    'DM Sans', system-ui, -apple-system, sans-serif;
+      --font-display: 'DM Serif Display', Georgia, serif;
+      --font-body:    'Inter', system-ui, -apple-system, sans-serif;
 
       --r-sm: 8px;
       --r-md: 16px;
@@ -277,10 +281,10 @@
     }
     .hero-tagline {
       font-family: var(--font-display);
-      font-style: italic;
       font-size: clamp(1rem, 2.5vw, 1.35rem);
       color: rgba(255,255,255,.5);
       margin-bottom: 3rem;
+      letter-spacing: .08em;
     }
     .hero-cta {
       display: inline-block;
@@ -367,10 +371,6 @@
       border-radius: 50%;
       opacity: .5;
     }
-    .marquee-item em {
-      font-style: italic;
-      color: var(--terra);
-    }
     @keyframes marquee {
       0% { transform: translateX(0); }
       100% { transform: translateX(-50%); }
@@ -382,7 +382,7 @@
       font-weight: 500;
       letter-spacing: .25em;
       text-transform: uppercase;
-      color: var(--mynt-dark);
+      color: var(--maroon);
       margin-bottom: 1.5rem;
     }
     .mosaic-divider {
@@ -421,9 +421,8 @@
       letter-spacing: .02em;
       line-height: 1.2;
     }
-    .story h2 em {
-      font-style: italic;
-      color: var(--terra);
+    .story h2 strong {
+      color: var(--maroon);
       font-weight: 400;
     }
     .story p {
@@ -448,7 +447,6 @@
     }
     .pull-quote {
       font-family: var(--font-display);
-      font-style: italic;
       font-size: 1.3rem;
       color: var(--navy);
       line-height: 1.6;
@@ -490,9 +488,8 @@
       font-weight: 300;
       color: var(--navy);
     }
-    .rail-header h2 em {
-      font-style: italic;
-      color: var(--terra);
+    .rail-header h2 strong {
+      color: var(--maroon);
       font-weight: 400;
     }
     .rail {
@@ -573,11 +570,6 @@
       font-size: clamp(1.8rem, 4vw, 2.8rem);
       font-weight: 300;
       color: var(--navy);
-    }
-    .ig-header h2 em {
-      font-style: italic;
-      color: var(--terra);
-      font-weight: 400;
     }
     .ig-header .ig-handle {
       display: inline-flex;
@@ -668,11 +660,6 @@
       font-weight: 300;
       color: var(--navy);
     }
-    .menu h2 em {
-      font-style: italic;
-      color: var(--terra);
-      font-weight: 400;
-    }
     .menu-columns {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -725,9 +712,9 @@
       text-align: center;
       margin-top: 3rem;
       font-family: var(--font-display);
-      font-style: italic;
       font-size: 1rem;
-      color: var(--terra);
+      color: var(--maroon);
+      letter-spacing: .04em;
     }
 
     /* ---------- VISIT ---------- */
@@ -758,11 +745,6 @@
       font-weight: 300;
       color: var(--navy);
       margin-bottom: 2.5rem;
-    }
-    .visit h2 em {
-      font-style: italic;
-      color: var(--terra);
-      font-weight: 400;
     }
     .visit-detail { margin-bottom: 1.6rem; }
     .visit-detail-label {
@@ -834,7 +816,7 @@
       position: absolute;
       top: 0; left: 0; right: 0;
       height: 3px;
-      background: linear-gradient(to right, var(--mynt-dark), var(--gold), var(--terra), var(--gold), var(--mynt-dark));
+      background: linear-gradient(to right, var(--mynt-dark), var(--gold), var(--maroon), var(--gold), var(--mynt-dark));
     }
     .footer-brand {
       font-family: var(--font-display);
@@ -873,8 +855,8 @@
     }
     .footer-tagline {
       font-family: var(--font-display);
-      font-style: italic;
       font-size: .9rem;
+      letter-spacing: .06em;
       color: rgba(255,255,255,.25);
       margin-bottom: 2rem;
     }
@@ -979,29 +961,29 @@
     <div class="marquee-wrap" aria-hidden="true">
       <div class="marquee-track">
         <span class="marquee-item">Moroccocino <span class="dot"></span></span>
-        <span class="marquee-item"><em>Shakshuka</em> <span class="dot"></span></span>
+        <span class="marquee-item">Shakshuka <span class="dot"></span></span>
         <span class="marquee-item">Moroccan Mint Tea <span class="dot"></span></span>
-        <span class="marquee-item"><em>Mesamman</em> <span class="dot"></span></span>
+        <span class="marquee-item">Mesamman <span class="dot"></span></span>
         <span class="marquee-item">Frullatos <span class="dot"></span></span>
-        <span class="marquee-item"><em>French Pastries</em> <span class="dot"></span></span>
+        <span class="marquee-item">French Pastries <span class="dot"></span></span>
         <span class="marquee-item">Specialty Lattes <span class="dot"></span></span>
-        <span class="marquee-item"><em>Paninis</em> <span class="dot"></span></span>
+        <span class="marquee-item">Paninis <span class="dot"></span></span>
         <!-- duplicate for seamless loop -->
         <span class="marquee-item">Moroccocino <span class="dot"></span></span>
-        <span class="marquee-item"><em>Shakshuka</em> <span class="dot"></span></span>
+        <span class="marquee-item">Shakshuka <span class="dot"></span></span>
         <span class="marquee-item">Moroccan Mint Tea <span class="dot"></span></span>
-        <span class="marquee-item"><em>Mesamman</em> <span class="dot"></span></span>
+        <span class="marquee-item">Mesamman <span class="dot"></span></span>
         <span class="marquee-item">Frullatos <span class="dot"></span></span>
-        <span class="marquee-item"><em>French Pastries</em> <span class="dot"></span></span>
+        <span class="marquee-item">French Pastries <span class="dot"></span></span>
         <span class="marquee-item">Specialty Lattes <span class="dot"></span></span>
-        <span class="marquee-item"><em>Paninis</em> <span class="dot"></span></span>
+        <span class="marquee-item">Paninis <span class="dot"></span></span>
       </div>
     </div>
 
     <!-- STORY -->
     <section class="story" id="story">
       <p class="section-label reveal">Our Story</p>
-      <h2 class="reveal reveal-d1">a <em>riad</em> on main street</h2>
+      <h2 class="reveal reveal-d1">a riad on main street</h2>
       <p class="reveal reveal-d2">
         Step through the door at 118 South Main and you leave Ann Arbor behind.
         Three floors unfold like a Moroccan riad — the blue-and-white mosaic tile
@@ -1043,7 +1025,7 @@
     <section class="rail-section" id="space">
       <div class="rail-header">
         <p class="section-label reveal">The Space</p>
-        <h2 class="reveal reveal-d1">three floors of <em>elsewhere</em></h2>
+        <h2 class="reveal reveal-d1">three floors of elsewhere</h2>
       </div>
 
       <div class="rail" role="region" aria-label="Photo gallery — drag to scroll">
@@ -1095,7 +1077,7 @@
     <section class="ig-section" id="instagram">
       <div class="ig-header">
         <p class="section-label reveal">From the Feed</p>
-        <h2 class="reveal reveal-d1">follow the <em>journey</em></h2>
+        <h2 class="reveal reveal-d1">follow the journey</h2>
         <a href="https://instagram.com/mynthousecafe" target="_blank" rel="noopener" class="ig-handle reveal reveal-d2">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
           @mynthousecafe
@@ -1119,22 +1101,22 @@
     <div class="marquee-wrap" aria-hidden="true">
       <div class="marquee-track">
         <span class="marquee-item">Halal Certified <span class="dot"></span></span>
-        <span class="marquee-item"><em>4.7★ on Google</em> <span class="dot"></span></span>
+        <span class="marquee-item">4.7★ on Google <span class="dot"></span></span>
         <span class="marquee-item">Open 8 AM – Midnight <span class="dot"></span></span>
-        <span class="marquee-item"><em>Three Floors</em> <span class="dot"></span></span>
+        <span class="marquee-item">Three Floors <span class="dot"></span></span>
         <span class="marquee-item">Downtown Ann Arbor <span class="dot"></span></span>
-        <span class="marquee-item"><em>Michigan's First</em> <span class="dot"></span></span>
+        <span class="marquee-item">Michigan's First <span class="dot"></span></span>
         <span class="marquee-item">Moroccan Hospitality <span class="dot"></span></span>
-        <span class="marquee-item"><em>Riad on Main Street</em> <span class="dot"></span></span>
+        <span class="marquee-item">Riad on Main Street <span class="dot"></span></span>
         <!-- duplicate -->
         <span class="marquee-item">Halal Certified <span class="dot"></span></span>
-        <span class="marquee-item"><em>4.7★ on Google</em> <span class="dot"></span></span>
+        <span class="marquee-item">4.7★ on Google <span class="dot"></span></span>
         <span class="marquee-item">Open 8 AM – Midnight <span class="dot"></span></span>
-        <span class="marquee-item"><em>Three Floors</em> <span class="dot"></span></span>
+        <span class="marquee-item">Three Floors <span class="dot"></span></span>
         <span class="marquee-item">Downtown Ann Arbor <span class="dot"></span></span>
-        <span class="marquee-item"><em>Michigan's First</em> <span class="dot"></span></span>
+        <span class="marquee-item">Michigan's First <span class="dot"></span></span>
         <span class="marquee-item">Moroccan Hospitality <span class="dot"></span></span>
-        <span class="marquee-item"><em>Riad on Main Street</em> <span class="dot"></span></span>
+        <span class="marquee-item">Riad on Main Street <span class="dot"></span></span>
       </div>
     </div>
 
@@ -1143,7 +1125,7 @@
       <div class="menu-inner">
         <div class="menu-header">
           <p class="section-label reveal">The Menu</p>
-          <h2 class="reveal reveal-d1">taste the <em>tradition</em></h2>
+          <h2 class="reveal reveal-d1">taste the tradition</h2>
         </div>
 
         <div class="menu-columns">
@@ -1225,7 +1207,7 @@
       <div class="visit-inner">
         <div class="visit-info">
           <p class="section-label reveal">Find Us</p>
-          <h2 class="reveal reveal-d1">come sit a <em>while</em></h2>
+          <h2 class="reveal reveal-d1">come sit a while</h2>
 
           <div class="visit-detail reveal reveal-d2">
             <p class="visit-detail-label">Address</p>
