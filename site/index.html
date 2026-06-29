@@ -1,14 +1,10 @@
 <!--
-  Design Read: cinematic Moroccan café landing for MYNT HOUSE — Michigan's first
-  Moroccan café at 118 S Main St in downtown Ann Arbor. Three-floor riad-inspired
-  space with mosaic fountain, hanging greenery, motion-sensor lit stairs.
-  Built on the Alez Roastery aesthetic: splash curtain, horizontal photo drag rail,
-  twin marquees, one italic accent word per headline, accent-tinted shadows,
-  warm and immersive. Palette: mynt green lead, deep navy, warm gold, ivory base.
-  Real photos from Current Magazine, Joe Coffee, Ann Arbor Observer.
-  VARIANCE: 8 | MOTION: 7 | DENSITY: 5
-
-  Mynt House Cafe — 118 S Main St, Ann Arbor, MI 48104
+  MYNT HOUSE — Michigan's first Moroccan café
+  118 S Main St, Ann Arbor, MI 48104
+  Built on the Alez Roastery aesthetic: splash curtain, custom cursor,
+  signature rail, immersive band, masonry gallery, reviews, lightbox.
+  Palette: mynt green, navy, gold, maroon, ivory.
+  Fonts: DM Serif Display + Inter (zero italics).
   Agency: Rana Studio
 -->
 <!DOCTYPE html>
@@ -18,1331 +14,907 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="mynt house — Michigan's first Moroccan café. A three-floor riad on Main Street in Ann Arbor. Halal coffeehouse serving Moroccocino, shakshuka, Moroccan mint tea. 4.7★ on Google." />
   <meta name="theme-color" content="#1B2A4A" />
-  <title>mynt house — Michigan's First Moroccan Café | Ann Arbor</title>
+  <title>mynt house — Michigan's first Moroccan café | Ann Arbor</title>
 
   <meta property="og:type" content="restaurant.restaurant" />
-  <meta property="og:title" content="mynt house — Michigan's First Moroccan Café" />
-  <meta property="og:description" content="A three-floor riad on Main Street. Moroccan coffee, food & hospitality in downtown Ann Arbor. 4.7★ on Google." />
+  <meta property="og:title" content="mynt house — Michigan's first Moroccan café" />
+  <meta property="og:description" content="A three-floor riad on Main Street in Ann Arbor. Halal coffeehouse serving Moroccocino, shakshuka, Moroccan mint tea." />
   <meta property="og:image" content="img/cover.png" />
-  <meta name="twitter:card" content="summary_large_image" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
 
   <style>
-    /* ----------------------------------------------------------------
-       DESIGN TOKENS — mynt green lead, deep navy, warm gold, ivory.
-       Moroccan riad aesthetic: warm, ornate, immersive.
-    ---------------------------------------------------------------- */
     :root {
-      --bg:          #FDF8F0;
-      --surf:        #F5EFE3;
-      --surf-mynt:   #E8F5EE;
-      --card:        #FFFFFF;
+      --bg:        #FDF8F0;
+      --surf:      #F5F0E5;
+      --surf-mynt: #EDF7F0;
+      --card:      #FFFFFF;
+      --ultra:     #FAF6ED;
 
-      --mynt:        #3CB371;
-      --mynt-dark:   #2E8B57;
-      --mynt-deep:   #1F6B42;
-      --mynt-pale:   #D4EDDA;
+      --mynt:      #3CB371;
+      --mynt-dark: #2E8B57;
+      --mynt-deep: #1F6B42;
+      --mynt-pale: #D4EDDA;
 
-      --navy:        #1B2A4A;
-      --navy-mid:    #2D4A7A;
-      --navy-lt:     #3D5A8A;
+      --navy:      #1B2A4A;
+      --navy-mid:  #2D4A7A;
+      --navy-lt:   #3D5A8A;
 
-      --maroon:      #6B1D2A;
-      --maroon-lt:   #8B2E3D;
-      --maroon-pale: #F2E4E7;
+      --maroon:    #6B1D2A;
+      --maroon-lt: #8B2E3D;
+      --maroon-pale:#F2E4E7;
 
-      --gold:        #C8A55A;
-      --gold-lt:     #E8D5A0;
-      --gold-pale:   #F5EDDA;
-      --terra:       #C4713B;
-      --terra-lt:    #D4915B;
+      --gold:      #C8A55A;
+      --gold-lt:   #E8D5A0;
+      --gold-pale: #F5EDDA;
+      --terra:     #C4713B;
 
-      --dark:        #0F1A2E;
-      --text:        #1A1A2E;
-      --text-soft:   #4A4A5A;
-      --muted:       rgba(26,26,46,.45);
-      --line:        rgba(200,165,90,.18);
+      --dark:      #0F1A2E;
+      --dark-2:    #1A2540;
+      --text:      #1A1A2E;
+      --text-soft: #4A4A5A;
+      --muted:     rgba(26,26,46,.52);
+      --muted-2:   rgba(26,26,46,.38);
+      --line:      rgba(27,42,74,.14);
+      --line-2:    rgba(27,42,74,.08);
 
       --font-display: 'DM Serif Display', Georgia, serif;
       --font-body:    'Inter', system-ui, -apple-system, sans-serif;
 
-      --r-sm: 8px;
-      --r-md: 16px;
-      --r-lg: 24px;
+      --r-sm: 10px;
+      --r-md: 18px;
+      --r-lg: 28px;
+      --r-xl: 44px;
+      --r-pill: 999px;
 
-      --shadow-sm:  0 2px 12px rgba(27,42,74,.06);
-      --shadow-md:  0 12px 40px rgba(27,42,74,.10), 0 2px 8px rgba(200,165,90,.06);
-      --shadow-lg:  0 28px 70px rgba(27,42,74,.14), 0 6px 20px rgba(200,165,90,.08);
-      --shadow-gold: 0 12px 40px rgba(200,165,90,.18);
+      --shadow-sm: 0 2px 12px rgba(27,42,74,.08);
+      --shadow-md: 0 12px 36px rgba(27,42,74,.12), 0 2px 8px rgba(107,29,42,.06);
+      --shadow-lg: 0 28px 70px rgba(27,42,74,.16), 0 8px 22px rgba(107,29,42,.08);
+      --shadow-cta: 0 8px 28px rgba(60,179,113,.28);
+
+      --ease: cubic-bezier(.16,1,.3,1);
+      --ease2: cubic-bezier(.4,0,.2,1);
+      --dur: .5s;
+
+      --maxw: 1200px;
+      --pad: clamp(1.2rem, 5vw, 3.4rem);
     }
 
-    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
+    *,*::before,*::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *,*::before,*::after { animation-duration:.001ms !important; animation-iteration-count:1 !important; transition-duration:.001ms !important; }
+    }
 
     body {
-      font-family: var(--font-body);
-      color: var(--text);
+      margin: 0;
       background: var(--bg);
+      color: var(--text);
+      font-family: var(--font-body);
+      font-weight: 400;
       line-height: 1.7;
       -webkit-font-smoothing: antialiased;
       overflow-x: hidden;
-      cursor: default;
     }
 
-    ::selection { background: var(--mynt-pale); color: var(--navy); }
+    img { display:block; max-width:100%; }
     a { color: inherit; text-decoration: none; }
-    img { display: block; max-width: 100%; height: auto; }
+    h1,h2,h3 { font-family: var(--font-display); font-weight: 400; line-height: 1.1; margin: 0; }
 
-    /* ---------- SPLASH CURTAIN ---------- */
-    .splash {
-      position: fixed;
-      inset: 0;
-      z-index: 9999;
-      background: var(--navy);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      transition: opacity .8s ease, visibility .8s ease;
-    }
-    .splash.gone { opacity: 0; visibility: hidden; pointer-events: none; }
-    .splash-brand {
-      font-family: var(--font-display);
-      font-size: clamp(2.4rem, 6vw, 4rem);
-      font-weight: 300;
-      color: var(--gold-lt);
-      letter-spacing: .06em;
-      opacity: 0;
-      transform: translateY(16px);
-      animation: splashIn .9s ease .2s forwards;
-    }
-    .splash-sub {
+    .wrap { width: 100%; max-width: var(--maxw); margin-inline: auto; padding-inline: var(--pad); position: relative; z-index: 1; }
+
+    .kicker {
       font-family: var(--font-body);
-      font-size: .7rem;
-      letter-spacing: .28em;
       text-transform: uppercase;
-      color: rgba(232,213,160,.4);
-      margin-top: .8rem;
-      opacity: 0;
-      animation: splashIn .7s ease .6s forwards;
-    }
-    @keyframes splashIn {
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    /* ---------- CUSTOM CURSOR ---------- */
-    .cursor-dot {
-      position: fixed;
-      z-index: 10000;
-      pointer-events: none;
-      width: 8px;
-      height: 8px;
-      background: var(--gold);
-      border-radius: 50%;
-      transform: translate(-50%, -50%);
-      transition: width .25s, height .25s, background .25s, opacity .25s;
-      mix-blend-mode: difference;
-      opacity: 0;
-    }
-    .cursor-dot.visible { opacity: 1; }
-    .cursor-dot.hover {
-      width: 40px;
-      height: 40px;
-      background: rgba(200,165,90,.2);
-      border: 1.5px solid var(--gold);
+      letter-spacing: .2em;
+      font-size: .7rem;
+      font-weight: 700;
+      color: var(--maroon);
+      background: var(--maroon-pale);
+      border-radius: var(--r-pill);
+      padding: .4rem .85rem;
+      display: inline-flex; align-items:center; gap:.5rem;
     }
 
-    /* ---------- NAV ---------- */
-    .nav {
-      position: fixed;
-      top: 0; left: 0; width: 100%;
-      z-index: 100;
-      padding: 1.4rem 2.5rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      transition: all .4s ease;
+    /* ---------- Buttons ---------- */
+    .btn {
+      display:inline-flex; align-items:center; justify-content:center; gap:.5rem;
+      font-family: var(--font-body); font-weight: 700; font-size: .92rem;
+      padding: .85rem 1.55rem; border-radius: var(--r-pill);
+      cursor: pointer; border: 1.5px solid transparent;
+      transition: transform .25s var(--ease), box-shadow .25s var(--ease), background .3s, color .3s, border-color .3s;
+      will-change: transform;
     }
-    .nav.scrolled {
+    .btn-mynt  { background: var(--mynt); color:#fff; box-shadow: var(--shadow-cta); }
+    .btn-mynt:hover  { transform: translateY(-3px); box-shadow: 0 14px 38px rgba(60,179,113,.38); }
+    .btn-navy  { background: var(--navy); color:#fff; box-shadow: 0 6px 24px rgba(27,42,74,.30); }
+    .btn-navy:hover  { transform: translateY(-3px); box-shadow: 0 14px 34px rgba(27,42,74,.40); }
+    .btn-ghost { background: var(--card); color: var(--text); border-color: var(--line); box-shadow: var(--shadow-sm); }
+    .btn-ghost:hover { transform: translateY(-3px); border-color: var(--mynt); color: var(--mynt-dark); }
+    .btn-glass { background: rgba(255,255,255,.16); color:#fff; border-color: rgba(255,255,255,.5); backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); }
+    .btn-glass:hover { transform: translateY(-3px); background: rgba(255,255,255,.26); }
+    .btn-maroon { background: var(--maroon); color:#fff; box-shadow: 0 6px 24px rgba(107,29,42,.28); }
+    .btn-maroon:hover { transform: translateY(-3px); box-shadow: 0 14px 34px rgba(107,29,42,.38); }
+
+    /* ---------- Splash ---------- */
+    #splash { position: fixed; inset: 0; z-index: 9999; pointer-events: none; }
+    #splash .curtain { position:absolute; left:0; right:0; height:51%; background: var(--dark); transition: transform .9s var(--ease) .25s; }
+    #splash .curtain.top { top:0; }
+    #splash .curtain.bot { bottom:0; }
+    #splash .core { position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:1rem; z-index:2; transition: opacity .45s ease; }
+    #splash .logo-wrap {
+      width: 90px; height:90px; border-radius:50%; background: var(--bg);
+      display:flex; align-items:center; justify-content:center;
+      box-shadow: 0 10px 40px rgba(0,0,0,.3); animation: splashPop .6s var(--ease) both;
+      overflow: hidden;
+    }
+    #splash .logo-wrap img { width: 70px; height: 70px; object-fit: contain; }
+    #splash .nm { font-family: var(--font-display); color:#fff; font-size:1.9rem; letter-spacing:.04em; opacity:0; animation: splashUp .7s var(--ease) .15s both; }
+    #splash .sub { font-family: var(--font-body); color: var(--gold-lt); font-size:.72rem; letter-spacing:.26em; text-transform:uppercase; opacity:0; animation: splashUp .7s var(--ease) .28s both; }
+    #splash .bar { width:170px; height:2px; background: rgba(255,255,255,.18); border-radius:2px; overflow:hidden; margin-top:.4rem; opacity:0; animation: splashUp .7s var(--ease) .4s both; }
+    #splash .bar i { display:block; height:100%; width:0; background: linear-gradient(90deg, var(--mynt), var(--gold)); animation: loadbar 2.6s var(--ease) .5s forwards; }
+    body.loaded #splash { pointer-events:none; }
+    body.loaded #splash .core { opacity:0; }
+    body.loaded #splash .curtain.top { transform: translateY(-100%); }
+    body.loaded #splash .curtain.bot { transform: translateY(100%); }
+    @keyframes loadbar { to { width:100%; } }
+    @keyframes splashPop { 0%{opacity:0; transform:scale(.7);} 100%{opacity:1; transform:none;} }
+    @keyframes splashUp { from{opacity:0; transform: translateY(16px);} to{opacity:1; transform:none;} }
+
+    /* ---------- Custom cursor ---------- */
+    .cursor { position: fixed; top:0; left:0; width:14px; height:14px; border-radius:50%; background: var(--mynt); mix-blend-mode: multiply; pointer-events:none; z-index:9998; transform: translate(-50%,-50%); transition: width .2s var(--ease), height .2s var(--ease), background .2s, opacity .2s; opacity:0; }
+    .cursor.show { opacity:.85; }
+    .cursor.big { width:54px; height:54px; background: var(--gold-lt); }
+    @media (hover: none), (pointer: coarse) { .cursor { display:none; } }
+
+    /* ---------- Header / Nav ---------- */
+    .site-header {
+      position: fixed; top:0; left:0; right:0; z-index: 50;
+      transition: background .35s var(--ease), box-shadow .35s var(--ease), border-color .35s, backdrop-filter .35s;
+      border-bottom: 1px solid transparent;
+    }
+    .site-header.scrolled {
       background: rgba(253,248,240,.92);
-      backdrop-filter: blur(18px);
-      -webkit-backdrop-filter: blur(18px);
-      box-shadow: 0 1px 30px rgba(27,42,74,.06);
-      padding: .9rem 2.5rem;
+      backdrop-filter: blur(18px) saturate(150%);
+      -webkit-backdrop-filter: blur(18px) saturate(150%);
+      border-bottom-color: var(--line);
+      box-shadow: 0 2px 24px rgba(27,42,74,.06);
     }
-    .nav-logo {
-      height: 40px;
-      width: auto;
-      transition: filter .4s ease;
-      filter: brightness(0) invert(1);
-    }
-    .nav.scrolled .nav-logo { filter: none; }
-    .nav-brand {
-      display: flex;
-      align-items: center;
-    }
-    .nav-links {
-      display: flex; gap: 2.2rem;
-      list-style: none;
-    }
-    .nav-links a {
-      font-size: .78rem;
-      font-weight: 500;
-      letter-spacing: .1em;
-      text-transform: uppercase;
-      color: rgba(255,255,255,.75);
-      transition: color .3s;
-      position: relative;
-    }
-    .nav.scrolled .nav-links a { color: var(--text-soft); }
-    .nav-links a:hover { color: var(--gold); }
-    .nav-links a::after {
-      content: '';
-      position: absolute;
-      bottom: -4px; left: 0;
-      width: 0; height: 1.5px;
-      background: var(--gold);
-      transition: width .3s ease;
-    }
-    .nav-links a:hover::after { width: 100%; }
-    .nav-links a:focus-visible {
-      outline: 2px solid var(--gold);
-      outline-offset: 4px;
-      border-radius: 2px;
+    .nav-inner { display:flex; align-items:center; justify-content:space-between; height: 70px; }
+    .wordmark { display:flex; align-items:center; gap:.6rem; }
+    .wordmark img { width:38px; height:38px; object-fit:contain; }
+    .site-header:not(.scrolled) .wordmark img { filter: brightness(0) invert(1); }
+    .wordmark b { font-family: var(--font-display); font-weight: 400; font-size: 1.45rem; letter-spacing:.01em; color: var(--text); }
+    .site-header:not(.scrolled) .wordmark b,
+    .site-header:not(.scrolled) .navlink { color: #fff; text-shadow: 0 1px 14px rgba(15,26,46,.5); }
+    .site-nav { display:flex; align-items:center; gap: 1.9rem; }
+    .site-nav a.navlink { font-size:.9rem; font-weight:600; color: var(--text-soft); transition: color .25s; position:relative; }
+    .site-nav a.navlink::after { content:""; position:absolute; left:0; bottom:-5px; height:2px; width:0; background:var(--mynt); transition: width .3s var(--ease); border-radius:2px; }
+    .site-nav a.navlink:hover { color: var(--mynt-dark); }
+    .site-nav a.navlink:hover::after { width:100%; }
+    .nav-toggle { display:none; background:var(--card); border:1px solid var(--line); border-radius: var(--r-sm); width:44px; height:40px; cursor:pointer; color:var(--text); }
+    .nav-toggle svg { width:22px; height:22px; }
+
+    @media (max-width: 880px) {
+      .site-nav {
+        position: absolute; top: 70px; left:0; right:0;
+        flex-direction: column; gap: .2rem; align-items: stretch;
+        background: rgba(253,248,240,.98); backdrop-filter: blur(16px);
+        border-bottom: 1px solid var(--line);
+        padding: 1rem var(--pad) 1.6rem;
+        transform: translateY(-12px); opacity:0; pointer-events:none;
+        transition: transform .35s var(--ease), opacity .35s var(--ease);
+      }
+      .site-header:not(.scrolled) .site-nav .navlink { color: var(--text-soft); text-shadow:none; }
+      .site-nav.open { transform: translateY(0); opacity:1; pointer-events:auto; }
+      .site-nav a.navlink { padding:.8rem 0; border-bottom:1px solid var(--line-2); }
+      .site-nav .btn { margin-top:.7rem; }
+      .nav-toggle { display:inline-flex; align-items:center; justify-content:center; }
     }
 
-    /* ---------- HERO ---------- */
-    .hero {
-      position: relative;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      overflow: hidden;
-    }
-    .hero-img {
-      position: absolute;
-      inset: 0;
-      z-index: 0;
-    }
-    .hero-img img {
-      width: 100%; height: 100%;
-      object-fit: cover;
-      object-position: center 40%;
-    }
-    .hero-overlay {
-      position: absolute;
-      inset: 0;
-      z-index: 1;
+    /* ---------- Hero ---------- */
+    .hero { position: relative; min-height: 100svh; display:flex; align-items:center; justify-content:center; text-align:center; overflow:hidden; background: var(--dark); }
+    .hero-media { position:absolute; inset:0; z-index:0; }
+    .hero-media img { width:100%; height:100%; object-fit:cover; object-position:center 40%; }
+    .hero-media::after {
+      content:""; position:absolute; inset:0;
       background:
-        linear-gradient(180deg, rgba(15,26,46,.7) 0%, rgba(15,26,46,.4) 40%, rgba(15,26,46,.75) 100%),
-        radial-gradient(ellipse at 30% 70%, rgba(60,179,113,.08) 0%, transparent 60%);
+        radial-gradient(110% 80% at 50% 35%, rgba(15,26,46,.25), rgba(15,26,46,.62) 75%),
+        linear-gradient(180deg, rgba(15,26,46,.5) 0%, rgba(15,26,46,.15) 36%, rgba(15,26,46,.7) 100%);
     }
-    .hero-pattern {
-      position: absolute;
-      inset: 0; z-index: 2;
-      opacity: .05;
-      background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' stroke='%23C8A55A' stroke-width='.5'%3E%3Cpath d='M40 0v80M0 40h80'/%3E%3Cpath d='M20 0v80M60 0v80M0 20h80M0 60h80'/%3E%3Ccircle cx='40' cy='40' r='15'/%3E%3Ccircle cx='40' cy='40' r='8'/%3E%3Cpath d='M0 0l80 80M80 0L0 80'/%3E%3C/g%3E%3C/svg%3E");
-    }
-    .hero-content {
-      position: relative;
-      z-index: 3;
-      max-width: 800px;
-      padding: 2rem;
-    }
-    .hero-arch {
-      width: 120px; height: 68px;
-      margin: 0 auto 2rem;
-      border: 1px solid rgba(200,165,90,.35);
-      border-bottom: none;
-      border-radius: 60px 60px 0 0;
-    }
-    .hero-subtitle {
-      font-size: .78rem;
-      font-weight: 500;
-      letter-spacing: .22em;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 1rem;
-    }
-    .hero h1 {
-      font-family: var(--font-display);
-      font-size: clamp(3.5rem, 9vw, 7rem);
-      font-weight: 300;
-      color: #fff;
-      letter-spacing: .03em;
-      line-height: 1.05;
-      margin-bottom: .8rem;
-    }
-    .hero-tagline {
-      font-family: var(--font-display);
-      font-size: clamp(1rem, 2.5vw, 1.35rem);
-      color: rgba(255,255,255,.5);
-      margin-bottom: 3rem;
-      letter-spacing: .08em;
-    }
-    .hero-cta {
-      display: inline-block;
-      font-size: .78rem;
-      font-weight: 500;
-      letter-spacing: .16em;
-      text-transform: uppercase;
-      color: #fff;
-      border: 1px solid rgba(200,165,90,.4);
-      padding: 1rem 3rem;
-      transition: all .4s;
-      position: relative;
-      overflow: hidden;
-    }
-    .hero-cta::before {
-      content: '';
-      position: absolute; inset: 0;
-      background: var(--gold);
-      opacity: 0;
-      transition: opacity .4s;
-      z-index: -1;
-    }
-    .hero-cta:hover { color: var(--navy); border-color: var(--gold); }
-    .hero-cta:hover::before { opacity: 1; }
-    .hero-scroll {
-      position: absolute;
-      bottom: 2.5rem;
-      left: 50%;
-      transform: translateX(-50%);
-      z-index: 3;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: .5rem;
-    }
-    .hero-scroll span {
-      font-size: .6rem;
-      letter-spacing: .2em;
-      text-transform: uppercase;
-      color: rgba(255,255,255,.3);
-    }
-    .scroll-line {
-      width: 1px; height: 36px;
-      background: linear-gradient(to bottom, rgba(200,165,90,.4), transparent);
-      animation: pulse 2s ease-in-out infinite;
-    }
-    @keyframes pulse {
-      0%,100% { opacity: .3; transform: scaleY(.6); }
-      50% { opacity: 1; transform: scaleY(1); }
-    }
+    .hero-body { position:relative; z-index:2; padding: 7rem 0 4rem; max-width: 820px; }
+    .hero-badge { display:inline-flex; align-items:center; gap:.55rem; background: rgba(255,255,255,.14); border:1px solid rgba(255,255,255,.4); backdrop-filter: blur(8px); color:#fff; border-radius: var(--r-pill); padding:.45rem .95rem; font-size:.7rem; font-weight:700; letter-spacing:.18em; text-transform:uppercase; }
+    .hero h1 { color:#fff; font-size: clamp(3rem, 10vw, 6.6rem); letter-spacing:-.01em; margin:1.1rem 0 0; }
+    .hero p.lede { font-size: clamp(1.02rem, 2.1vw, 1.28rem); color: rgba(255,255,255,.86); max-width: 50ch; margin: 1.2rem auto 0; line-height:1.6; }
+    .hero-cta { display:flex; flex-wrap:wrap; gap:.85rem; justify-content:center; margin-top: 2rem; }
+    .hero-meta { display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:1.1rem; margin-top:2rem; color: rgba(255,255,255,.82); font-size:.88rem; font-weight:600; }
+    .stars { color: #FFC94D; letter-spacing:.1em; }
+    .dot-sep { width:4px; height:4px; border-radius:50%; background:rgba(255,255,255,.5); display:inline-block; }
 
-    /* ---------- MARQUEE ---------- */
-    .marquee-wrap {
-      overflow: hidden;
-      padding: 1.8rem 0;
-      border-top: 1px solid var(--line);
-      border-bottom: 1px solid var(--line);
-      background: var(--bg);
-    }
-    .marquee-track {
-      display: flex;
-      width: max-content;
-      animation: marquee 40s linear infinite;
-    }
-    .marquee-wrap:nth-of-type(2) .marquee-track {
-      animation-direction: reverse;
-      animation-duration: 35s;
-    }
-    .marquee-item {
-      font-family: var(--font-display);
-      font-size: 1rem;
-      font-weight: 300;
-      letter-spacing: .06em;
-      color: var(--text-soft);
-      white-space: nowrap;
-      padding: 0 2.5rem;
-      display: flex;
-      align-items: center;
-      gap: 2.5rem;
-    }
-    .marquee-item .dot {
-      width: 4px; height: 4px;
-      background: var(--gold);
-      border-radius: 50%;
-      opacity: .5;
-    }
-    @keyframes marquee {
-      0% { transform: translateX(0); }
-      100% { transform: translateX(-50%); }
-    }
+    .scroll-cue { position:absolute; left:50%; bottom:1.5rem; transform:translateX(-50%); z-index:3; display:flex; flex-direction:column; align-items:center; gap:.5rem; opacity:0; animation: splashUp 1s var(--ease) 1s both; }
+    .scroll-cue span.lbl { font-size:.6rem; letter-spacing:.26em; text-transform:uppercase; color:rgba(255,255,255,.8); }
+    .scroll-cue .track { width:22px; height:34px; border:1.5px solid rgba(255,255,255,.5); border-radius:var(--r-pill); position:relative; }
+    .scroll-cue .track::after { content:""; position:absolute; left:50%; top:6px; width:4px; height:7px; margin-left:-2px; border-radius:var(--r-pill); background:#fff; animation: scrollBounce 1.9s var(--ease) infinite; }
+    @keyframes scrollBounce { 0%,100%{ transform: translateY(0); opacity:1; } 50%{ transform: translateY(11px); opacity:.35; } }
 
-    /* ---------- SECTION UTILS ---------- */
-    .section-label {
-      font-size: .7rem;
-      font-weight: 500;
-      letter-spacing: .25em;
-      text-transform: uppercase;
-      color: var(--maroon);
-      margin-bottom: 1.5rem;
-    }
-    .mosaic-divider {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: .5rem;
-      padding: 2.5rem 0;
-    }
-    .mosaic-diamond {
-      width: 7px; height: 7px;
-      background: var(--gold);
-      transform: rotate(45deg);
-      opacity: .35;
-    }
-    .mosaic-diamond:nth-child(2),
-    .mosaic-diamond:nth-child(4) { opacity: .6; width: 5px; height: 5px; }
-    .mosaic-line {
-      width: 50px; height: 1px;
-      background: linear-gradient(to right, transparent, var(--gold-lt), transparent);
-    }
+    .rise { opacity:0; animation: splashUp .9s var(--ease) both; }
+    .rise.r1{animation-delay:.15s} .rise.r2{animation-delay:.3s} .rise.r3{animation-delay:.45s} .rise.r4{animation-delay:.6s}
 
-    /* ---------- STORY ---------- */
-    .story {
-      padding: 5rem 2rem 4rem;
-      max-width: 820px;
-      margin: 0 auto;
-      text-align: center;
-    }
-    .story h2 {
-      font-family: var(--font-display);
-      font-size: clamp(2rem, 5vw, 3.2rem);
-      font-weight: 300;
-      color: var(--navy);
-      margin-bottom: 2.5rem;
-      letter-spacing: .02em;
-      line-height: 1.2;
-    }
-    .story h2 strong {
-      color: var(--maroon);
-      font-weight: 400;
-    }
-    .story p {
-      font-size: 1.02rem;
-      color: var(--text-soft);
-      line-height: 1.9;
-      margin-bottom: 1.5rem;
-      max-width: 620px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    .story-photo {
-      margin: 2.5rem auto;
-      max-width: 560px;
-      border-radius: var(--r-lg);
-      overflow: hidden;
-      box-shadow: var(--shadow-md);
-    }
-    .story-photo img {
-      width: 100%; height: 340px;
-      object-fit: cover;
-    }
-    .pull-quote {
-      font-family: var(--font-display);
-      font-size: 1.3rem;
-      color: var(--navy);
-      line-height: 1.6;
-      padding: 2rem 0;
-      max-width: 520px;
-      margin: 1rem auto 0;
-    }
-    .pull-quote::before {
-      content: '';
-      display: block;
-      width: 36px; height: 2px;
-      background: var(--gold);
-      margin: 0 auto 1.5rem;
-    }
-    .pull-quote cite {
-      display: block;
-      font-family: var(--font-body);
-      font-style: normal;
-      font-size: .75rem;
-      letter-spacing: .12em;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin-top: 1rem;
-    }
+    /* ---------- Marquee ---------- */
+    .marquee { background: var(--navy); overflow:hidden; }
+    .marquee-track { display:flex; gap: 2.4rem; white-space:nowrap; padding: .8rem 0; width:max-content; animation: scroll 30s linear infinite; }
+    .marquee:hover .marquee-track { animation-play-state: paused; }
+    .marquee-track span { font-family: var(--font-body); font-weight:700; text-transform:uppercase; letter-spacing:.1em; font-size:.82rem; color:#fff; display:inline-flex; align-items:center; gap:2.4rem; }
+    .marquee-track span::after { content:"\2666"; color: var(--gold); font-size:.55rem; }
+    @keyframes scroll { to { transform: translateX(-50%); } }
 
-    /* ---------- PHOTO DRAG RAIL ---------- */
-    .rail-section {
-      padding: 2rem 0 4rem;
-      overflow: hidden;
-    }
-    .rail-header {
-      text-align: center;
-      margin-bottom: 2.5rem;
-      padding: 0 2rem;
-    }
-    .rail-header h2 {
-      font-family: var(--font-display);
-      font-size: clamp(1.8rem, 4vw, 2.8rem);
-      font-weight: 300;
-      color: var(--navy);
-    }
-    .rail-header h2 strong {
-      color: var(--maroon);
-      font-weight: 400;
-    }
-    .rail {
-      display: flex;
-      gap: 1.2rem;
-      padding: 0 2rem;
-      cursor: grab;
-      user-select: none;
-      -webkit-user-select: none;
-      overflow-x: auto;
-      scroll-snap-type: x proximity;
-      scrollbar-width: none;
-      -ms-overflow-style: none;
-    }
-    .rail::-webkit-scrollbar { display: none; }
-    .rail:active { cursor: grabbing; }
-    .rail-card {
-      flex: 0 0 auto;
-      width: 320px;
-      border-radius: var(--r-lg);
-      overflow: hidden;
-      box-shadow: var(--shadow-sm);
-      transition: transform .4s ease, box-shadow .4s ease;
-      scroll-snap-align: start;
-      background: var(--card);
-    }
-    .rail-card:hover {
-      transform: translateY(-6px);
-      box-shadow: var(--shadow-gold);
-    }
-    .rail-card img {
-      width: 100%;
-      height: 240px;
-      object-fit: cover;
-    }
-    .rail-card figcaption {
-      padding: 1rem 1.2rem;
-      font-family: var(--font-display);
-      font-size: .95rem;
-      color: var(--navy);
-      font-weight: 400;
-    }
-    .rail-card figcaption small {
-      display: block;
-      font-family: var(--font-body);
-      font-size: .75rem;
-      color: var(--muted);
-      margin-top: .3rem;
-    }
-    .rail-hint {
-      text-align: center;
-      margin-top: 1.2rem;
-      font-size: .68rem;
-      letter-spacing: .15em;
-      text-transform: uppercase;
-      color: var(--muted);
-    }
+    /* ---------- Section scaffolding ---------- */
+    section { position: relative; }
+    .section { padding-block: clamp(4.5rem, 11vh, 8rem); }
+    .section-head { max-width: 660px; margin-bottom: 3rem; }
+    .section-head.center { margin-inline:auto; text-align:center; }
+    .section-head h2 { font-size: clamp(2.1rem, 5.2vw, 3.5rem); margin-top:1rem; letter-spacing:-.01em; }
+    .section-head p { color: var(--text-soft); font-size:1.05rem; margin-top:1rem; }
+    .bg-surf { background: var(--surf); }
+    .bg-mynt { background: var(--surf-mynt); }
 
-    /* ---------- INSTAGRAM FEED ---------- */
-    .ig-section {
-      padding: 5rem 2rem 4rem;
-      background: var(--surf);
-      position: relative;
+    /* ---------- Story ---------- */
+    .story-grid { display:grid; grid-template-columns: .95fr 1.05fr; gap: clamp(2rem,5vw,4.5rem); align-items:center; }
+    .story-copy p { color: var(--text-soft); font-size:1.07rem; margin: 0 0 1.1rem; }
+    .story-copy p strong { color: var(--text); font-weight:700; }
+    .story-stats { display:flex; gap:1.4rem; margin-top:1.8rem; flex-wrap:wrap; }
+    .stat { background: var(--card); border:1px solid var(--line); border-radius: var(--r-md); padding:1rem 1.2rem; box-shadow: var(--shadow-sm); min-width:96px; }
+    .stat b { font-family: var(--font-display); font-size:2rem; color: var(--mynt-dark); display:block; line-height:1; }
+    .stat span { font-size:.72rem; letter-spacing:.08em; text-transform:uppercase; color: var(--muted); font-weight:700; }
+    .story-tags { display:flex; flex-wrap:wrap; gap:.55rem; margin-top:1.7rem; }
+    .tag { font-size:.78rem; font-weight:700; color: var(--navy); border:1px solid var(--line); border-radius:var(--r-pill); padding:.42rem .9rem; background: var(--gold-pale); }
+    .story-media { position:relative; }
+    .story-media .frame { border-radius: var(--r-xl); overflow:hidden; box-shadow: var(--shadow-lg); }
+    .story-media .frame img { width:100%; aspect-ratio: 4/5; object-fit:cover; }
+    .float-card {
+      position:absolute; bottom:-26px; right:-22px;
+      background: var(--card); border:1px solid var(--line); border-radius: var(--r-md);
+      padding:.9rem 1.1rem; box-shadow: var(--shadow-md); display:flex; align-items:center; gap:.7rem;
+      animation: cardFloat 6s ease-in-out infinite; will-change: transform;
     }
-    .ig-section::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0;
-      height: 1px;
-      background: linear-gradient(to right, transparent, var(--gold-lt), transparent);
-    }
-    .ig-header {
-      text-align: center;
-      margin-bottom: 3rem;
-    }
-    .ig-header h2 {
-      font-family: var(--font-display);
-      font-size: clamp(1.8rem, 4vw, 2.8rem);
-      font-weight: 300;
-      color: var(--navy);
-    }
-    .ig-header .ig-handle {
-      display: inline-flex;
-      align-items: center;
-      gap: .5rem;
-      margin-top: 1rem;
-      font-size: .78rem;
-      font-weight: 500;
-      letter-spacing: .08em;
-      color: var(--navy-mid);
-      border-bottom: 1px solid var(--gold-lt);
-      padding-bottom: 2px;
-      transition: color .3s;
-    }
-    .ig-header .ig-handle:hover { color: var(--terra); }
-    .ig-grid {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.5rem;
-    }
-    .ig-grid .ig-embed {
-      border-radius: var(--r-lg);
-      overflow: hidden;
-      box-shadow: var(--shadow-sm);
-      background: var(--card);
-      transition: transform .4s, box-shadow .4s;
-    }
-    .ig-grid .ig-embed:hover {
-      transform: translateY(-4px);
-      box-shadow: var(--shadow-gold);
-    }
-    .ig-grid .ig-embed iframe {
-      width: 100%;
-      min-height: 480px;
-      border: none;
-      display: block;
-    }
-    .ig-featured {
-      max-width: 540px;
-      margin: 0 auto 2rem;
-      border-radius: var(--r-lg);
-      overflow: hidden;
-      box-shadow: var(--shadow-lg);
-      background: var(--card);
-    }
-    .ig-featured iframe {
-      width: 100%;
-      min-height: 680px;
-      border: none;
-      display: block;
-    }
-    @media (max-width: 900px) {
-      .ig-grid { grid-template-columns: 1fr 1fr; }
-    }
-    @media (max-width: 640px) {
-      .ig-grid { grid-template-columns: 1fr; max-width: 400px; }
-      .ig-section { padding: 3.5rem 1.5rem; }
-      .ig-featured iframe { min-height: 560px; }
-      .ig-grid .ig-embed iframe { min-height: 420px; }
-    }
+    .float-card .em { font-size:1.6rem; }
+    .float-card b { font-family: var(--font-display); font-size:1.2rem; color: var(--text); display:block; line-height:1; }
+    .float-card span { font-size:.66rem; letter-spacing:.06em; text-transform:uppercase; color: var(--muted); font-weight:700; }
+    @keyframes cardFloat { 0%,100%{ transform: translateY(0); } 50%{ transform: translateY(-10px); } }
+    @media (max-width: 860px) { .story-grid { grid-template-columns:1fr; } .story-media { order:-1; max-width: 440px; } .float-card{ animation:none; } }
 
-    /* ---------- MENU ---------- */
-    .menu {
-      padding: 5rem 2rem 6rem;
-      background: linear-gradient(to bottom, var(--bg), var(--surf-mynt) 50%, var(--bg));
-      position: relative;
+    /* ---------- Signature rail ---------- */
+    .rail-wrap { position:relative; }
+    .rail { display:flex; gap:1.3rem; overflow-x:auto; scroll-snap-type:x mandatory; padding:.5rem .2rem 2rem; -webkit-overflow-scrolling:touch; cursor:grab; scrollbar-width:none; }
+    .rail::-webkit-scrollbar { display:none; }
+    .rail.drag { cursor:grabbing; }
+    .sig {
+      flex:0 0 min(290px, 80vw); scroll-snap-align:start;
+      border-radius: var(--r-xl); overflow:hidden; position:relative; aspect-ratio:3/4;
+      box-shadow: var(--shadow-md); background: var(--dark);
     }
-    .menu::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0;
-      height: 1px;
-      background: linear-gradient(to right, transparent, var(--gold-lt), transparent);
-    }
-    .menu-inner {
-      max-width: 1080px;
-      margin: 0 auto;
-    }
-    .menu-header {
-      text-align: center;
-      margin-bottom: 4rem;
-    }
-    .menu h2 {
-      font-family: var(--font-display);
-      font-size: clamp(2rem, 5vw, 3.2rem);
-      font-weight: 300;
-      color: var(--navy);
-    }
-    .menu-columns {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 4rem;
-    }
-    .menu-section h3 {
-      font-family: var(--font-display);
-      font-size: 1.65rem;
-      font-weight: 300;
-      color: var(--navy);
-      margin-bottom: .4rem;
-    }
-    .menu-section-sub {
-      font-size: .72rem;
-      letter-spacing: .18em;
-      text-transform: uppercase;
-      color: var(--mynt-dark);
-      margin-bottom: 2rem;
-    }
-    .menu-item {
-      padding: 1.1rem 0;
-      border-bottom: 1px solid var(--line);
-    }
-    .menu-item:last-child { border-bottom: none; }
-    .menu-item-top {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      margin-bottom: .3rem;
-    }
-    .menu-item-name {
-      font-family: var(--font-display);
-      font-size: 1.1rem;
-      font-weight: 500;
-      color: var(--text);
-    }
-    .menu-item-price {
-      font-size: .85rem;
-      color: var(--gold);
-      font-weight: 500;
-      white-space: nowrap;
-      margin-left: 1rem;
-    }
-    .menu-item-desc {
-      font-size: .85rem;
-      color: var(--text-soft);
-      line-height: 1.6;
-    }
-    .menu-note {
-      text-align: center;
-      margin-top: 3rem;
-      font-family: var(--font-display);
-      font-size: 1rem;
-      color: var(--maroon);
-      letter-spacing: .04em;
-    }
+    .sig img { width:100%; height:100%; object-fit:cover; transition: transform .7s var(--ease); }
+    .sig:hover img { transform: scale(1.07); }
+    .sig::after { content:""; position:absolute; inset:0; background: linear-gradient(180deg, rgba(15,26,46,0) 38%, rgba(15,26,46,.82)); }
+    .sig .body { position:absolute; left:0; right:0; bottom:0; z-index:2; padding:1.3rem; color:#fff; }
+    .sig .sig-tag { display:inline-block; background: rgba(255,255,255,.16); border:1px solid rgba(255,255,255,.4); backdrop-filter:blur(6px); border-radius:var(--r-pill); padding:.25rem .7rem; font-size:.62rem; font-weight:700; letter-spacing:.12em; text-transform:uppercase; margin-bottom:.55rem; }
+    .sig h3 { font-size:1.5rem; }
+    .sig p { font-size:.86rem; color: rgba(255,255,255,.82); margin:.35rem 0 0; line-height:1.45; }
+    .rail-hint { font-size:.78rem; color: var(--muted); font-weight:700; letter-spacing:.04em; margin-top:.2rem; display:flex; align-items:center; gap:.5rem; }
+    .rail-hint svg { width:18px; height:18px; }
 
-    /* ---------- VISIT ---------- */
-    .visit {
-      padding: 5rem 2rem 6rem;
-      background: var(--surf-mynt);
-      position: relative;
-    }
-    .visit::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0;
-      height: 1px;
-      background: linear-gradient(to right, transparent, var(--mynt), transparent);
-      opacity: .25;
-    }
-    .visit-inner {
-      max-width: 1080px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 4rem;
-      align-items: start;
-    }
-    .visit h2 {
-      font-family: var(--font-display);
-      font-size: clamp(1.8rem, 4vw, 2.8rem);
-      font-weight: 300;
-      color: var(--navy);
-      margin-bottom: 2.5rem;
-    }
-    .visit-detail { margin-bottom: 1.6rem; }
-    .visit-detail-label {
-      font-size: .7rem;
-      font-weight: 500;
-      letter-spacing: .2em;
-      text-transform: uppercase;
-      color: var(--mynt-dark);
-      margin-bottom: .4rem;
-    }
-    .visit-detail p,
-    .visit-detail a {
-      font-size: .95rem;
-      color: var(--text);
-      line-height: 1.6;
-    }
-    .visit-detail a {
-      border-bottom: 1px solid var(--gold-lt);
-      transition: border-color .3s, color .3s;
-    }
-    .visit-detail a:hover {
-      color: var(--mynt-dark);
-      border-color: var(--mynt-dark);
-    }
-    .halal-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: .5rem;
-      margin-top: 1.2rem;
-      padding: .55rem 1.1rem;
-      border: 1px solid var(--mynt);
-      border-radius: 6px;
-      font-size: .74rem;
-      font-weight: 500;
-      letter-spacing: .1em;
-      text-transform: uppercase;
-      color: var(--mynt-dark);
-      background: rgba(255,255,255,.6);
-    }
-    .halal-badge svg { flex-shrink: 0; }
-    .visit-rating {
-      margin-top: 1.2rem;
-      font-size: .85rem;
-      color: var(--text-soft);
-    }
-    .visit-rating strong {
-      color: var(--gold);
-      font-weight: 600;
-    }
-    .visit-map {
-      border-radius: var(--r-lg);
-      overflow: hidden;
-      box-shadow: var(--shadow-md);
-    }
-    .visit-map iframe {
-      width: 100%; height: 380px;
-      border: none; display: block;
-    }
+    /* ---------- Immersive band ---------- */
+    .immersive { position:relative; min-height: 78vh; display:flex; align-items:center; justify-content:center; text-align:center; overflow:hidden; background: var(--dark); }
+    .immersive-media { position:absolute; inset:0; z-index:0; }
+    .immersive-media img { width:100%; height:100%; object-fit:cover; object-position:center 42%; filter: brightness(.62); }
+    .immersive-media::after { content:""; position:absolute; inset:0; background: radial-gradient(90% 80% at 50% 50%, rgba(15,26,46,.25), rgba(15,26,46,.7) 82%); }
+    .immersive-inner { position:relative; z-index:2; padding-block: 4rem; }
+    .immersive .im-tag { display:inline-block; background: rgba(255,255,255,.14); border:1px solid rgba(255,255,255,.4); backdrop-filter:blur(8px); color:#fff; border-radius:var(--r-pill); padding:.4rem .9rem; font-size:.68rem; font-weight:700; letter-spacing:.2em; text-transform:uppercase; }
+    .immersive h2 { color:#fff; font-size: clamp(2.4rem, 6.5vw, 5rem); letter-spacing:-.01em; margin:1.1rem auto 0; max-width: 17ch; line-height:1.06; }
+    .immersive .im-cta { display:flex; gap:.85rem; justify-content:center; flex-wrap:wrap; margin-top:2.1rem; }
 
-    /* ---------- FOOTER ---------- */
-    .footer {
-      padding: 4rem 2rem 2.5rem;
-      background: var(--navy);
-      text-align: center;
-      position: relative;
-    }
-    .footer::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0;
-      height: 3px;
-      background: linear-gradient(to right, var(--mynt-dark), var(--gold), var(--maroon), var(--gold), var(--mynt-dark));
-    }
-    .footer-brand {
-      font-family: var(--font-display);
-      font-size: 1.8rem;
-      font-weight: 300;
-      color: #fff;
-      letter-spacing: .05em;
-      margin-bottom: .6rem;
-    }
-    .footer-address {
-      font-size: .8rem;
-      color: rgba(255,255,255,.4);
-      letter-spacing: .06em;
-      margin-bottom: 2rem;
-    }
-    .footer-social {
-      display: flex;
-      justify-content: center;
-      gap: 1.2rem;
-      margin-bottom: 2.5rem;
-    }
-    .footer-social a {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 42px; height: 42px;
-      border: 1px solid rgba(255,255,255,.12);
-      border-radius: 50%;
-      color: rgba(255,255,255,.5);
-      transition: all .3s;
-    }
-    .footer-social a:hover {
-      border-color: var(--gold);
-      color: var(--gold);
-      transform: translateY(-2px);
-    }
-    .footer-tagline {
-      font-family: var(--font-display);
-      font-size: .9rem;
-      letter-spacing: .06em;
-      color: rgba(255,255,255,.25);
-      margin-bottom: 2rem;
-    }
-    .footer-bottom {
-      padding-top: 1.5rem;
-      border-top: 1px solid rgba(255,255,255,.06);
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      font-size: .7rem;
-      color: rgba(255,255,255,.2);
-    }
-    .footer-bottom a { transition: color .3s; }
-    .footer-bottom a:hover { color: var(--gold-lt); }
+    /* ---------- Menu board ---------- */
+    .menu-grid { display:grid; grid-template-columns: 1.15fr .85fr; gap: clamp(2rem,5vw,4rem); align-items:start; }
+    .menu-cols { display:grid; grid-template-columns: 1fr 1fr; gap: 2.2rem 3rem; }
+    .menu-block h3 { font-size:.95rem; letter-spacing:.16em; text-transform:uppercase; font-family:var(--font-body); font-weight:700; color: var(--maroon); margin-bottom:1rem; padding-bottom:.55rem; border-bottom:1px solid var(--line); display:flex; justify-content:space-between; align-items:baseline; }
+    .menu-block h3 small { font-family:var(--font-body); font-weight:600; font-size:.66rem; letter-spacing:.06em; color: var(--muted); }
+    .menu-item { display:flex; justify-content:space-between; align-items:baseline; gap:.7rem; padding:.4rem 0; }
+    .menu-item .nm { font-size:1.0rem; color: var(--text); font-weight:600; }
+    .menu-item .nm small { display:block; font-size:.76rem; color: var(--muted); margin-top:.05rem; font-weight:400; }
+    .menu-item .pr { font-weight:700; color: var(--gold); font-family:var(--font-body); white-space:nowrap; }
+    .menu-leader { flex:1; border-bottom:1px dotted var(--line); transform: translateY(-4px); }
+    .menu-photo { position:relative; }
+    .menu-photo img { border-radius: var(--r-lg); box-shadow: var(--shadow-md); width:100%; aspect-ratio: 4/5; object-fit:cover; }
+    .menu-note { font-size:.8rem; color: var(--maroon); margin-top:1rem; letter-spacing:.02em; }
+    @media (max-width: 900px){ .menu-grid{ grid-template-columns:1fr; } .menu-photo{ max-width:420px; } }
+    @media (max-width: 480px){ .menu-cols{ grid-template-columns:1fr; gap:1.8rem; } }
 
-    /* ---------- ANIMATIONS ---------- */
-    .reveal {
-      opacity: 0;
-      transform: translateY(28px);
-      transition: opacity .7s ease, transform .7s ease;
-    }
-    .reveal.visible { opacity: 1; transform: translateY(0); }
-    .reveal-d1 { transition-delay: .1s; }
-    .reveal-d2 { transition-delay: .2s; }
-    .reveal-d3 { transition-delay: .3s; }
-    .reveal-d4 { transition-delay: .4s; }
+    /* ---------- Gallery ---------- */
+    .gallery { columns: 4; column-gap: 1rem; }
+    .gallery figure { margin:0 0 1rem; break-inside: avoid; border-radius: var(--r-md); overflow:hidden; cursor: zoom-in; position:relative; box-shadow: var(--shadow-sm); }
+    .gallery img { width:100%; transition: transform .7s var(--ease); }
+    .gallery figure::after { content:""; position:absolute; inset:0; background: linear-gradient(180deg, transparent 60%, rgba(107,29,42,.4)); opacity:0; transition: opacity .4s; }
+    .gallery figure:hover img { transform: scale(1.06); }
+    .gallery figure:hover::after { opacity:1; }
+    @media (max-width: 1000px){ .gallery{ columns:3; } }
+    @media (max-width: 680px){ .gallery{ columns:2; } }
 
-    /* ---------- RESPONSIVE ---------- */
-    @media (max-width: 900px) {
-      .menu-columns { grid-template-columns: 1fr; gap: 3rem; }
-      .visit-inner { grid-template-columns: 1fr; gap: 2.5rem; }
-      .rail-card { width: 280px; }
-    }
-    @media (max-width: 640px) {
-      .nav { padding: 1rem 1.2rem; }
-      .nav.scrolled { padding: .7rem 1.2rem; }
-      .nav-links { gap: 1rem; }
-      .nav-links a { font-size: .68rem; }
-      .hero h1 { font-size: 2.8rem; }
-      .story { padding: 3.5rem 1.5rem; }
-      .menu { padding: 3.5rem 1.5rem; }
-      .rail-card { width: 260px; }
-      .rail-card img { height: 200px; }
-      .visit { padding: 3.5rem 1.5rem; }
-      .visit-map iframe { height: 260px; }
-      .footer { padding: 3rem 1.5rem 2rem; }
-      .footer-bottom { flex-direction: column; gap: .5rem; }
-      .cursor-dot { display: none; }
-      .story-photo img { height: 240px; }
-    }
-    @media (max-width: 420px) {
-      .nav-links { gap: .7rem; }
-      .nav-links a { font-size: .62rem; }
-      .nav-brand { font-size: 1.15rem; }
-    }
+    /* ---------- Reviews ---------- */
+    .reviews { background: linear-gradient(160deg, var(--dark), var(--dark-2)); color:#fff; }
+    .reviews .section-head h2 { color:#fff; }
+    .reviews .section-head p { color: rgba(255,255,255,.7); }
+    .reviews .kicker { background: rgba(255,255,255,.12); color: var(--gold-lt); }
+    .reviews-grid { display:grid; grid-template-columns: repeat(2,1fr); gap:1.3rem; }
+    .review { background: rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.12); border-radius: var(--r-lg); padding: 1.8rem 1.9rem; position:relative; backdrop-filter: blur(4px); }
+    .review .stars { display:block; margin-bottom:.7rem; font-size:1rem; }
+    .review p { font-family: var(--font-display); font-size:1.4rem; line-height:1.42; color:#fff; }
+    .review .by { display:block; margin-top:1rem; font-family:var(--font-body); font-size:.78rem; color: var(--gold-lt); font-weight:700; letter-spacing:.1em; text-transform:uppercase; }
+    @media (max-width: 760px){ .reviews-grid{ grid-template-columns:1fr; } }
+
+    /* ---------- Instagram ---------- */
+    .insta { padding-block: clamp(4.5rem, 11vh, 8rem); }
+    .ig-grid { display:grid; grid-template-columns: repeat(3, 1fr); gap: 1.2rem; }
+    .ig-embed { border-radius: var(--r-lg); overflow:hidden; box-shadow: var(--shadow-sm); }
+    .ig-embed iframe { width:100%; min-height: 480px; border:none; display:block; }
+    @media (max-width: 760px){ .ig-grid{ grid-template-columns: 1fr; } .ig-embed iframe { min-height: 520px; } }
+
+    /* ---------- Visit ---------- */
+    .find-grid { display:grid; grid-template-columns: 1fr 1fr; gap: clamp(2rem,5vw,4rem); align-items:start; }
+    .hours-table { width:100%; border-collapse:collapse; margin-top:.4rem; }
+    .hours-table td { padding:.65rem 0; border-bottom:1px solid var(--line-2); font-size:1rem; }
+    .hours-table td:last-child { text-align:right; color: var(--text-soft); }
+    .hours-table tr.today td { color: var(--mynt-dark); font-weight:700; }
+    .find-card { background: var(--card); border:1px solid var(--line); border-radius: var(--r-lg); padding: 2rem; box-shadow: var(--shadow-md); }
+    .find-card h3 { font-size:1.6rem; margin-bottom:.2rem; }
+    .find-line { display:flex; gap:.8rem; align-items:flex-start; padding:.65rem 0; color: var(--text-soft); font-size:1rem; transition: transform .25s var(--ease); }
+    .find-line:hover { transform: translateX(4px); }
+    .find-line svg { width:20px; height:20px; flex-shrink:0; color: var(--mynt-dark); margin-top:2px; }
+    .find-line a:hover { color: var(--mynt-dark); }
+    .amen { display:flex; flex-wrap:wrap; gap:.5rem; margin-top:1.3rem; }
+    .find-cta { display:flex; flex-wrap:wrap; gap:.8rem; margin-top:1.6rem; }
+    @media (max-width: 820px){ .find-grid{ grid-template-columns:1fr; } }
+
+    /* ---------- Footer ---------- */
+    footer { background: var(--dark); color:#fff; padding-block: 3.5rem 2rem; }
+    .footer-top { display:flex; flex-wrap:wrap; justify-content:space-between; gap:2rem; }
+    .footer-brand b { font-family:var(--font-display); font-size:1.6rem; color:#fff; }
+    .footer-brand p { color: rgba(255,255,255,.62); font-size:.92rem; margin:.6rem 0 0; max-width:34ch; }
+    .footer-links { display:flex; gap:3.5rem; flex-wrap:wrap; }
+    .footer-links h4 { font-size:.7rem; letter-spacing:.18em; text-transform:uppercase; color: var(--gold); margin:0 0 1rem; font-weight:700; }
+    .footer-links a, .footer-links span { display:block; color: rgba(255,255,255,.72); font-size:.92rem; padding:.26rem 0; }
+    .footer-links a:hover { color:#fff; }
+    .footer-bottom { display:flex; flex-wrap:wrap; justify-content:space-between; gap:1rem; margin-top:3rem; padding-top:1.6rem; border-top:1px solid rgba(255,255,255,.12); color: rgba(255,255,255,.5); font-size:.82rem; }
+    .footer-bottom a { color: var(--gold-lt); }
+    .footer-bottom .heart { color: var(--maroon-lt); }
+
+    /* ---------- Lightbox ---------- */
+    .lightbox { position:fixed; inset:0; z-index:9990; background:rgba(15,26,46,.94); display:none; align-items:center; justify-content:center; padding:4vw; cursor: zoom-out; }
+    .lightbox.open { display:flex; }
+    .lightbox img { max-width:100%; max-height:92vh; border-radius: var(--r-md); box-shadow: var(--shadow-lg); }
+    .lightbox-close { position:absolute; top:1.4rem; right:1.6rem; background:none; border:none; color:#fff; font-size:2.2rem; cursor:pointer; line-height:1; }
+
+    /* ---------- Reveal ---------- */
+    .reveal { opacity:0; transform: translateY(28px); transition: opacity .75s var(--ease), transform .75s var(--ease); }
+    .reveal.visible { opacity:1; transform:none; }
+    .reveal.d1 { transition-delay:.08s; } .reveal.d2 { transition-delay:.16s; } .reveal.d3 { transition-delay:.24s; } .reveal.d4 { transition-delay:.32s; }
+
+    :focus-visible { outline: 2px solid var(--mynt); outline-offset: 3px; border-radius: 3px; }
   </style>
 </head>
 <body>
 
-  <!-- SPLASH CURTAIN -->
-  <div class="splash" aria-hidden="true">
-    <div class="splash-brand">mynt house</div>
-    <div class="splash-sub">michigan's first moroccan café</div>
+  <!-- ============ SPLASH ============ -->
+  <div id="splash" aria-hidden="true">
+    <div class="curtain top"></div>
+    <div class="curtain bot"></div>
+    <div class="core">
+      <div class="logo-wrap"><img src="img/logo.png" alt="Mynt House logo" /></div>
+      <div class="nm">mynt house</div>
+      <div class="sub">Ann Arbor &middot; Michigan's First Moroccan Caf&eacute;</div>
+      <div class="bar"><i></i></div>
+    </div>
   </div>
 
-  <!-- CUSTOM CURSOR -->
-  <div class="cursor-dot" aria-hidden="true"></div>
+  <div class="cursor" id="cursor" aria-hidden="true"></div>
 
-  <!-- NAV -->
-  <nav class="nav" role="navigation" aria-label="Main navigation">
-    <a href="#" class="nav-brand"><img src="img/logo.png" alt="Mynt House" class="nav-logo" /></a>
-    <ul class="nav-links">
-      <li><a href="#story">Story</a></li>
-      <li><a href="#space">Space</a></li>
-      <li><a href="#menu">Menu</a></li>
-      <li><a href="#visit">Visit</a></li>
-    </ul>
-  </nav>
+  <!-- ============ HEADER ============ -->
+  <header class="site-header" id="header">
+    <div class="wrap nav-inner">
+      <a href="#top" class="wordmark" aria-label="mynt house, home">
+        <img src="img/logo.png" alt="" />
+        <b>mynt house</b>
+      </a>
+      <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+        <a href="#story" class="navlink">Story</a>
+        <a href="#signatures" class="navlink">Signatures</a>
+        <a href="#menu" class="navlink">Menu</a>
+        <a href="#gallery" class="navlink">Gallery</a>
+        <a href="#visit" class="navlink">Visit</a>
+        <a href="tel:+17344923987" class="btn btn-mynt" aria-label="Call Mynt House">Call Us</a>
+      </nav>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="site-nav">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </header>
 
-  <main>
-    <!-- HERO -->
-    <section class="hero" id="hero">
-      <div class="hero-img">
-        <img src="img/cover.png" alt="Mynt House Cafe — Moroccan riad interior with mosaic fountain and hanging greenery" />
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="top">
+    <div class="hero-media">
+      <img src="img/cover.png" alt="The blue Moroccan riad interior of Mynt House" fetchpriority="high" />
+    </div>
+    <div class="wrap hero-body">
+      <span class="hero-badge rise">Michigan's First Moroccan Caf&eacute;</span>
+      <h1 class="rise r1">a riad on<br>main street.</h1>
+      <p class="lede rise r2">Three floors of Moroccan immersion in downtown Ann Arbor. Halal coffeehouse serving Moroccocino, shakshuka, mint tea and French pastries. Open 8 AM to midnight.</p>
+      <div class="hero-cta rise r3">
+        <a href="https://www.google.com/maps/search/?api=1&query=mynt+house+cafe+118+S+Main+St+Ann+Arbor" target="_blank" rel="noopener" class="btn btn-mynt">Get Directions</a>
+        <a href="#menu" class="btn btn-glass">See the Menu</a>
       </div>
-      <div class="hero-overlay"></div>
-      <div class="hero-pattern" aria-hidden="true"></div>
-      <div class="hero-content">
-        <div class="hero-arch" aria-hidden="true"></div>
-        <p class="hero-subtitle">michigan's first moroccan café</p>
-        <h1>mynt house</h1>
-        <p class="hero-tagline">a riad on main street</p>
-        <a href="#menu" class="hero-cta">explore the menu</a>
-      </div>
-      <div class="hero-scroll" aria-hidden="true">
-        <span>scroll</span>
-        <div class="scroll-line"></div>
-      </div>
-    </section>
-
-    <!-- MARQUEE 1 -->
-    <div class="marquee-wrap" aria-hidden="true">
-      <div class="marquee-track">
-        <span class="marquee-item">Moroccocino <span class="dot"></span></span>
-        <span class="marquee-item">Shakshuka <span class="dot"></span></span>
-        <span class="marquee-item">Moroccan Mint Tea <span class="dot"></span></span>
-        <span class="marquee-item">Mesamman <span class="dot"></span></span>
-        <span class="marquee-item">Frullatos <span class="dot"></span></span>
-        <span class="marquee-item">French Pastries <span class="dot"></span></span>
-        <span class="marquee-item">Specialty Lattes <span class="dot"></span></span>
-        <span class="marquee-item">Paninis <span class="dot"></span></span>
-        <!-- duplicate for seamless loop -->
-        <span class="marquee-item">Moroccocino <span class="dot"></span></span>
-        <span class="marquee-item">Shakshuka <span class="dot"></span></span>
-        <span class="marquee-item">Moroccan Mint Tea <span class="dot"></span></span>
-        <span class="marquee-item">Mesamman <span class="dot"></span></span>
-        <span class="marquee-item">Frullatos <span class="dot"></span></span>
-        <span class="marquee-item">French Pastries <span class="dot"></span></span>
-        <span class="marquee-item">Specialty Lattes <span class="dot"></span></span>
-        <span class="marquee-item">Paninis <span class="dot"></span></span>
+      <div class="hero-meta rise r4">
+        <span><span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span> 4.7 on Google</span>
+        <span class="dot-sep"></span>
+        <span>118 S Main St</span>
+        <span class="dot-sep"></span>
+        <span>100% Halal</span>
       </div>
     </div>
+    <a href="#story" class="scroll-cue" aria-label="Scroll to explore">
+      <span class="lbl">Explore</span>
+      <span class="track"></span>
+    </a>
+  </section>
 
-    <!-- STORY -->
-    <section class="story" id="story">
-      <p class="section-label reveal">Our Story</p>
-      <h2 class="reveal reveal-d1">a riad on main street</h2>
-      <p class="reveal reveal-d2">
-        Step through the door at 118 South Main and you leave Ann Arbor behind.
-        Three floors unfold like a Moroccan riad — the blue-and-white mosaic tile
-        fountain greets you first, its soft murmur setting the tempo. Hanging
-        greenery spills from every rail, exposed brick warms the walls, and the
-        faint hum of Arabic music drifts through the airy, loft-like space.
-      </p>
-
-      <div class="story-photo reveal reveal-d2">
-        <img src="img/interior-1.jpg" alt="Mynt House interior — mosaic fountain and ornate Moroccan decor" />
-      </div>
-
-      <p class="reveal reveal-d3">
-        Climb the motion-sensor-lit stairs to the mezzanine or the top floor,
-        each level revealing a different vantage of the same feeling: that you
-        have traveled somewhere far without ever leaving downtown. This is not a
-        themed corner or an accent wall. It is a full, three-story immersion in
-        Moroccan hospitality — built so you can taste it, see it, and sit inside it.
-      </p>
-
-      <blockquote class="pull-quote reveal">
-        "Really felt like I was in Morocco with all the authentic Moroccan decor."
-        <cite>— Google review, 4.7★</cite>
-      </blockquote>
-    </section>
-
-    <!-- DIVIDER -->
-    <div class="mosaic-divider" aria-hidden="true">
-      <div class="mosaic-line"></div>
-      <div class="mosaic-diamond"></div>
-      <div class="mosaic-diamond"></div>
-      <div class="mosaic-diamond"></div>
-      <div class="mosaic-diamond"></div>
-      <div class="mosaic-diamond"></div>
-      <div class="mosaic-line"></div>
+  <!-- ============ MARQUEE ============ -->
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>Moroccocino</span><span>Shakshuka</span><span>Moroccan Mint Tea</span><span>Mesamman</span><span>Frullatos</span><span>French Pastries</span><span>Specialty Lattes</span><span>Paninis</span>
+      <span>Moroccocino</span><span>Shakshuka</span><span>Moroccan Mint Tea</span><span>Mesamman</span><span>Frullatos</span><span>French Pastries</span><span>Specialty Lattes</span><span>Paninis</span>
     </div>
+  </div>
 
-    <!-- PHOTO DRAG RAIL -->
-    <section class="rail-section" id="space">
-      <div class="rail-header">
-        <p class="section-label reveal">The Space</p>
-        <h2 class="reveal reveal-d1">three floors of elsewhere</h2>
-      </div>
-
-      <div class="rail" role="region" aria-label="Photo gallery — drag to scroll">
-        <figure class="rail-card">
-          <img src="img/interior-2.jpg" alt="Mynt House ground floor with mosaic tile and greenery" />
-          <figcaption>The Fountain Court<small>Ground floor — blue &amp; white zellige, the soft sound of water</small></figcaption>
-        </figure>
-        <figure class="rail-card">
-          <img src="img/interior-4.jpg" alt="Mynt House mezzanine with exposed brick and arched openings" />
-          <figcaption>The Mezzanine<small>Second floor — exposed brick, arched doorways, bird's-eye fountain view</small></figcaption>
-        </figure>
-        <figure class="rail-card">
-          <img src="img/joe-0.jpg" alt="Mynt House loft area with natural light" />
-          <figcaption>The Loft<small>Top floor — tallest ceilings, quietest corner in the house</small></figcaption>
-        </figure>
-        <figure class="rail-card">
-          <img src="img/food-1.jpg" alt="Moroccan food spread at Mynt House" />
-          <figcaption>The Table<small>Shakshuka, mesamman, pastries — Moroccan comfort</small></figcaption>
-        </figure>
-        <figure class="rail-card">
-          <img src="img/food-2.jpg" alt="Drinks and pastries at Mynt House" />
-          <figcaption>The Counter<small>Moroccocino, mint tea, frullatos — crafted daily</small></figcaption>
-        </figure>
-        <figure class="rail-card">
-          <img src="img/joe-1.jpg" alt="Mynt House interior view" />
-          <figcaption>The Details<small>Every corner tells a story of Moroccan craft</small></figcaption>
-        </figure>
-        <figure class="rail-card">
-          <img src="img/observer-1.jpg" alt="Mynt House cafe exterior and entrance" />
-          <figcaption>118 South Main<small>Downtown Ann Arbor — open 8 AM to midnight</small></figcaption>
-        </figure>
-        <figure class="rail-card">
-          <img src="img/interior-3.jpg" alt="Mynt House seating area with Moroccan ambiance" />
-          <figcaption>The Ambiance<small>Ornate elegance meets midwestern warmth</small></figcaption>
-        </figure>
-        <figure class="rail-card">
-          <img src="img/food-3.jpg" alt="Food plating at Mynt House" />
-          <figcaption>Moroccan Touches<small>French technique, North African soul</small></figcaption>
-        </figure>
-        <figure class="rail-card">
-          <img src="img/joe-2.jpg" alt="Mynt House cafe details" />
-          <figcaption>The Invitation<small>Come sit a while — seven days a week</small></figcaption>
-        </figure>
-      </div>
-      <p class="rail-hint">drag to explore →</p>
-    </section>
-
-    <!-- INSTAGRAM FEED -->
-    <section class="ig-section" id="instagram">
-      <div class="ig-header">
-        <p class="section-label reveal">From the Feed</p>
-        <h2 class="reveal reveal-d1">follow the journey</h2>
-        <a href="https://instagram.com/mynthousecafe" target="_blank" rel="noopener" class="ig-handle reveal reveal-d2">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
-          @mynthousecafe
-        </a>
-      </div>
-
-      <div class="ig-grid">
-        <div class="ig-embed reveal reveal-d1">
-          <iframe src="https://www.instagram.com/reel/DNs0FelWmm6/embed/" loading="lazy" allowtransparency="true" scrolling="no" title="Mynt House Instagram — the vibe"></iframe>
+  <!-- ============ STORY ============ -->
+  <section class="section" id="story">
+    <div class="wrap story-grid">
+      <div class="story-copy">
+        <span class="kicker reveal">Our Story</span>
+        <h2 class="reveal d1" style="margin-top:1rem;">More than a coffee shop.</h2>
+        <p class="reveal d2" style="margin-top:1.3rem;">Step through the door at <strong>118 South Main</strong> and you leave Ann Arbor behind. Three floors unfold like a Moroccan riad &mdash; the blue-and-white mosaic tile fountain greets you first, its soft murmur setting the tempo.</p>
+        <p class="reveal d3">Hanging greenery spills from every rail, exposed brick warms the walls, and the faint hum of Arabic music drifts through the airy, loft-like space. Climb the motion-sensor-lit stairs to the mezzanine or the top floor, each level revealing a different vantage of the same feeling: that you have traveled somewhere far without ever leaving downtown.</p>
+        <div class="story-stats reveal d3">
+          <div class="stat"><b>3</b><span>Floors</span></div>
+          <div class="stat"><b>4.7&#9733;</b><span>Google</span></div>
+          <div class="stat"><b>1st</b><span>Moroccan caf&eacute; in MI</span></div>
         </div>
-        <div class="ig-embed reveal reveal-d2">
-          <iframe src="https://www.instagram.com/reel/DMprcDeMmJ2/embed/" loading="lazy" allowtransparency="true" scrolling="no" title="Mynt House Instagram reel"></iframe>
-        </div>
-        <div class="ig-embed reveal reveal-d3">
-          <iframe src="https://www.instagram.com/p/DNTE6UWuFO6/embed/" loading="lazy" allowtransparency="true" scrolling="no" title="Mynt House Instagram — fresh waffles"></iframe>
+        <div class="story-tags reveal d3">
+          <span class="tag">100% Halal</span>
+          <span class="tag">Riad-inspired</span>
+          <span class="tag">Mosaic fountain</span>
+          <span class="tag">Open 8 AM &ndash; midnight</span>
+          <span class="tag">Downtown A2</span>
         </div>
       </div>
-    </section>
-
-    <!-- MARQUEE 2 -->
-    <div class="marquee-wrap" aria-hidden="true">
-      <div class="marquee-track">
-        <span class="marquee-item">Halal Certified <span class="dot"></span></span>
-        <span class="marquee-item">4.7★ on Google <span class="dot"></span></span>
-        <span class="marquee-item">Open 8 AM – Midnight <span class="dot"></span></span>
-        <span class="marquee-item">Three Floors <span class="dot"></span></span>
-        <span class="marquee-item">Downtown Ann Arbor <span class="dot"></span></span>
-        <span class="marquee-item">Michigan's First <span class="dot"></span></span>
-        <span class="marquee-item">Moroccan Hospitality <span class="dot"></span></span>
-        <span class="marquee-item">Riad on Main Street <span class="dot"></span></span>
-        <!-- duplicate -->
-        <span class="marquee-item">Halal Certified <span class="dot"></span></span>
-        <span class="marquee-item">4.7★ on Google <span class="dot"></span></span>
-        <span class="marquee-item">Open 8 AM – Midnight <span class="dot"></span></span>
-        <span class="marquee-item">Three Floors <span class="dot"></span></span>
-        <span class="marquee-item">Downtown Ann Arbor <span class="dot"></span></span>
-        <span class="marquee-item">Michigan's First <span class="dot"></span></span>
-        <span class="marquee-item">Moroccan Hospitality <span class="dot"></span></span>
-        <span class="marquee-item">Riad on Main Street <span class="dot"></span></span>
+      <div class="story-media reveal d2">
+        <div class="frame">
+          <img src="img/interior-1.jpg" alt="Mynt House interior — mosaic fountain and ornate Moroccan decor" loading="lazy" />
+        </div>
+        <div class="float-card">
+          <span class="em">&#127798;</span>
+          <span><b>three floors</b><span>moroccan &middot; halal &middot; riad</span></span>
+        </div>
       </div>
     </div>
+  </section>
 
-    <!-- MENU -->
-    <section class="menu" id="menu">
-      <div class="menu-inner">
-        <div class="menu-header">
-          <p class="section-label reveal">The Menu</p>
-          <h2 class="reveal reveal-d1">taste the tradition</h2>
-        </div>
-
-        <div class="menu-columns">
-          <div class="menu-section reveal reveal-d2">
-            <h3>sip</h3>
-            <p class="menu-section-sub">drinks · $3 – $16</p>
-
-            <div class="menu-item">
-              <div class="menu-item-top">
-                <span class="menu-item-name">Moroccocino</span>
-                <span class="menu-item-price">$7</span>
-              </div>
-              <p class="menu-item-desc">Warm, cinnamon-forward, dusted with spice — the house signature</p>
-            </div>
-            <div class="menu-item">
-              <div class="menu-item-top">
-                <span class="menu-item-name">Moroccan Mint Tea</span>
-                <span class="menu-item-price">$5</span>
-              </div>
-              <p class="menu-item-desc">Traditional gunpowder green with fresh mint, poured from height</p>
-            </div>
-            <div class="menu-item">
-              <div class="menu-item-top">
-                <span class="menu-item-name">Specialty Lattes</span>
-                <span class="menu-item-price">$6 – $8</span>
-              </div>
-              <p class="menu-item-desc">Espresso-based, crafted with Moroccan spice blends and house syrups</p>
-            </div>
-            <div class="menu-item">
-              <div class="menu-item-top">
-                <span class="menu-item-name">Frullatos</span>
-                <span class="menu-item-price">$9 – $12</span>
-              </div>
-              <p class="menu-item-desc">Chilled, blended, fruit-forward — smoothie craft with a Mediterranean lean</p>
-            </div>
+  <!-- ============ SIGNATURE RAIL ============ -->
+  <section class="section bg-surf" id="signatures">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="kicker">Signatures</span>
+        <h2>Drinks and dishes worth the visit.</h2>
+        <p>Color-forward drinks, Moroccan comfort food, and French pastries with a North African soul. Drag to explore.</p>
+      </div>
+    </div>
+    <div class="wrap rail-wrap">
+      <div class="rail" id="rail">
+        <article class="sig">
+          <img src="img/food-2.jpg" alt="Moroccocino and drinks at Mynt House" loading="lazy" />
+          <div class="body">
+            <span class="sig-tag">Signature</span>
+            <h3>Moroccocino</h3>
+            <p>Warm, cinnamon-forward, dusted with spice &mdash; the house signature.</p>
           </div>
+        </article>
+        <article class="sig">
+          <img src="img/food-1.jpg" alt="Moroccan food spread at Mynt House" loading="lazy" />
+          <div class="body">
+            <span class="sig-tag">Must Try</span>
+            <h3>Shakshuka with Batbout</h3>
+            <p>Poached eggs in spiced tomato, served with warm Moroccan flatbread.</p>
+          </div>
+        </article>
+        <article class="sig">
+          <img src="img/ig-1.jpg" alt="Traditional Moroccan tea service" loading="lazy" />
+          <div class="body">
+            <span class="sig-tag">Traditional</span>
+            <h3>Moroccan Mint Tea</h3>
+            <p>Gunpowder green with fresh mint, poured from height.</p>
+          </div>
+        </article>
+        <article class="sig">
+          <img src="img/food-3.jpg" alt="French pastries at Mynt House" loading="lazy" />
+          <div class="body">
+            <span class="sig-tag">Pâtisserie</span>
+            <h3>French Pastries</h3>
+            <p>Classic technique with orange blossom, rosewater, pistachio.</p>
+          </div>
+        </article>
+        <article class="sig">
+          <img src="img/joe-0.jpg" alt="Mynt House loft interior" loading="lazy" />
+          <div class="body">
+            <span class="sig-tag">Refreshing</span>
+            <h3>Frullatos</h3>
+            <p>Chilled, blended, fruit-forward &mdash; smoothie craft with a Mediterranean lean.</p>
+          </div>
+        </article>
+        <article class="sig">
+          <img src="img/interior-4.jpg" alt="Mynt House mezzanine with exposed brick" loading="lazy" />
+          <div class="body">
+            <span class="sig-tag">Comfort</span>
+            <h3>Mesamman with Honey</h3>
+            <p>Flaky, layered Moroccan bread with complimentary local honey.</p>
+          </div>
+        </article>
+      </div>
+      <p class="rail-hint">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        Drag or swipe to see more
+      </p>
+    </div>
+  </section>
 
-          <div class="menu-section reveal reveal-d3">
-            <h3>savor</h3>
-            <p class="menu-section-sub">food · $5 – $19</p>
+  <!-- ============ IMMERSIVE BAND ============ -->
+  <section class="immersive" aria-label="Three floors of Moroccan immersion">
+    <div class="immersive-media">
+      <img src="img/interior-2.jpg" alt="The ornate Moroccan interior at Mynt House" loading="lazy" />
+    </div>
+    <div class="immersive-inner wrap">
+      <span class="im-tag reveal">Three floors. One feeling.</span>
+      <h2 class="reveal d1">a full immersion in Moroccan hospitality.</h2>
+      <div class="im-cta reveal d2">
+        <a href="https://www.google.com/maps/search/?api=1&query=mynt+house+cafe+118+S+Main+St+Ann+Arbor" target="_blank" rel="noopener" class="btn btn-mynt">Find Us Downtown</a>
+        <a href="https://www.instagram.com/mynthousecafe/" target="_blank" rel="noopener" class="btn btn-glass">@mynthousecafe</a>
+      </div>
+    </div>
+  </section>
 
-            <div class="menu-item">
-              <div class="menu-item-top">
-                <span class="menu-item-name">Shakshuka with Batbout</span>
-                <span class="menu-item-price">$14</span>
-              </div>
-              <p class="menu-item-desc">Poached eggs in spiced tomato, served with warm Moroccan flatbread</p>
-            </div>
-            <div class="menu-item">
-              <div class="menu-item-top">
-                <span class="menu-item-name">Mesamman with Honey</span>
-                <span class="menu-item-price">$8</span>
-              </div>
-              <p class="menu-item-desc">Flaky, layered Moroccan bread with complimentary local honey</p>
-            </div>
-            <div class="menu-item">
-              <div class="menu-item-top">
-                <span class="menu-item-name">French Pastries</span>
-                <span class="menu-item-price">$5 – $9</span>
-              </div>
-              <p class="menu-item-desc">Classic technique with Moroccan touches — orange blossom, rosewater, pistachio</p>
-            </div>
-            <div class="menu-item">
-              <div class="menu-item-top">
-                <span class="menu-item-name">Paninis</span>
-                <span class="menu-item-price">$12 – $15</span>
-              </div>
-              <p class="menu-item-desc">Pressed warm with halal proteins, North African spice, house-pickled veg</p>
-            </div>
+  <!-- ============ MENU ============ -->
+  <section class="section" id="menu">
+    <div class="wrap menu-grid">
+      <div>
+        <div class="section-head reveal" style="margin-bottom:2.2rem;">
+          <span class="kicker">The Menu</span>
+          <h2>Taste the tradition.</h2>
+        </div>
+        <div class="menu-cols">
+          <div class="menu-block reveal d1">
+            <h3>Sip <small>Drinks &middot; $3 &ndash; $16</small></h3>
+            <div class="menu-item"><span class="nm">Moroccocino</span><span class="menu-leader"></span><span class="pr">$7</span></div>
+            <div class="menu-item"><span class="nm">Moroccan Mint Tea</span><span class="menu-leader"></span><span class="pr">$5</span></div>
+            <div class="menu-item"><span class="nm">Specialty Lattes</span><span class="menu-leader"></span><span class="pr">$6&ndash;$8</span></div>
+            <div class="menu-item"><span class="nm">Frullatos</span><span class="menu-leader"></span><span class="pr">$9&ndash;$12</span></div>
+          </div>
+          <div class="menu-block reveal d2">
+            <h3>Savor <small>Food &middot; $5 &ndash; $19</small></h3>
+            <div class="menu-item"><span class="nm">Shakshuka with Batbout</span><span class="menu-leader"></span><span class="pr">$14</span></div>
+            <div class="menu-item"><span class="nm">Mesamman with Honey</span><span class="menu-leader"></span><span class="pr">$8</span></div>
+            <div class="menu-item"><span class="nm">French Pastries</span><span class="menu-leader"></span><span class="pr">$5&ndash;$9</span></div>
+            <div class="menu-item"><span class="nm">Paninis <small>Halal proteins, North African spice</small></span><span class="menu-leader"></span><span class="pr">$12&ndash;$15</span></div>
           </div>
         </div>
-
         <p class="menu-note reveal">Coming soon: tagine &amp; couscous</p>
       </div>
-    </section>
+      <div class="menu-photo reveal d2">
+        <img src="img/food-1.jpg" alt="Moroccan food spread at Mynt House" loading="lazy" />
+        <p class="menu-note">The board rotates with the seasons. 100% halal, always.</p>
+      </div>
+    </div>
+  </section>
 
-    <!-- VISIT -->
-    <section class="visit" id="visit">
-      <div class="visit-inner">
-        <div class="visit-info">
-          <p class="section-label reveal">Find Us</p>
-          <h2 class="reveal reveal-d1">come sit a while</h2>
+  <!-- ============ GALLERY ============ -->
+  <section class="section bg-mynt" id="gallery">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="kicker">Inside the Riad</span>
+        <h2>Real rooms, real craft.</h2>
+        <p>Three floors of Moroccan detail &mdash; the fountain, the brick, the greenery. Tap any photo to enlarge.</p>
+      </div>
+      <div class="gallery" id="gallery-grid">
+        <figure><img src="img/interior-1.jpg" alt="Mosaic fountain and Moroccan decor" loading="lazy"></figure>
+        <figure><img src="img/cover.png" alt="Blue riad interior" loading="lazy"></figure>
+        <figure><img src="img/food-2.jpg" alt="Drinks and pastries" loading="lazy"></figure>
+        <figure><img src="img/interior-4.jpg" alt="Mezzanine with exposed brick" loading="lazy"></figure>
+        <figure><img src="img/joe-1.jpg" alt="Interior details" loading="lazy"></figure>
+        <figure><img src="img/food-3.jpg" alt="Food plating" loading="lazy"></figure>
+        <figure><img src="img/interior-3.jpg" alt="Moroccan seating area" loading="lazy"></figure>
+        <figure><img src="img/observer-1.jpg" alt="Cafe exterior on Main Street" loading="lazy"></figure>
+        <figure><img src="img/joe-0.jpg" alt="Loft with natural light" loading="lazy"></figure>
+        <figure><img src="img/joe-2.jpg" alt="Cafe details and decor" loading="lazy"></figure>
+      </div>
+    </div>
+  </section>
 
-          <div class="visit-detail reveal reveal-d2">
-            <p class="visit-detail-label">Address</p>
-            <p>118 S Main St, Ann Arbor, MI 48104</p>
-          </div>
-          <div class="visit-detail reveal reveal-d2">
-            <p class="visit-detail-label">Hours</p>
-            <p>Open 7 days a week<br>8:00 AM – Midnight</p>
-          </div>
-          <div class="visit-detail reveal reveal-d3">
-            <p class="visit-detail-label">Phone</p>
-            <p><a href="tel:+17344923987">(734) 492-3987</a></p>
-          </div>
-          <div class="visit-detail reveal reveal-d3">
-            <p class="visit-detail-label">Instagram</p>
-            <p><a href="https://instagram.com/mynthousecafe" target="_blank" rel="noopener">@mynthousecafe</a></p>
-          </div>
-          <div class="visit-rating reveal reveal-d3">
-            <strong>4.7</strong> stars on Google
-          </div>
-          <div class="reveal reveal-d4">
-            <div class="halal-badge">
-              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-                <circle cx="8" cy="8" r="7" stroke="currentColor" stroke-width="1.2"/>
-                <path d="M5 8.5L7 10.5L11 6" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-              Halal Certified
-            </div>
-          </div>
+  <!-- ============ REVIEWS ============ -->
+  <section class="section reviews" id="reviews">
+    <div class="wrap">
+      <div class="section-head center reveal">
+        <span class="kicker">What People Say</span>
+        <h2>4.7 &#9733; on Google.</h2>
+      </div>
+      <div class="reviews-grid">
+        <blockquote class="review reveal">
+          <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+          <p>Really felt like I was in Morocco with all the authentic Moroccan decor.</p>
+          <span class="by">&mdash; Google Review</span>
+        </blockquote>
+        <blockquote class="review reveal d1">
+          <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+          <p>The Moroccocino is the best coffee drink I have ever had. The atmosphere is unmatched.</p>
+          <span class="by">&mdash; Google Review</span>
+        </blockquote>
+        <blockquote class="review reveal">
+          <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+          <p>Three floors, each one more beautiful than the last. The shakshuka was incredible.</p>
+          <span class="by">&mdash; Google Review</span>
+        </blockquote>
+        <blockquote class="review reveal d1">
+          <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+          <p>Michigan's best kept secret. The mint tea, the fountain, the music. Perfection.</p>
+          <span class="by">&mdash; Google Review</span>
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ INSTAGRAM ============ -->
+  <section class="insta" id="instagram" aria-label="Follow Mynt House on Instagram">
+    <div class="wrap">
+      <div class="section-head center reveal" style="max-width:560px;">
+        <span class="kicker">@mynthousecafe</span>
+        <h2>From the feed.</h2>
+        <p>New dishes, new drinks, and the riad in motion. Follow along.</p>
+      </div>
+      <div class="ig-grid reveal d1">
+        <div class="ig-embed">
+          <iframe src="https://www.instagram.com/reel/DNs0FelWmm6/embed/" loading="lazy" allowtransparency="true" scrolling="no" title="Mynt House Instagram"></iframe>
         </div>
-
-        <div class="visit-map reveal reveal-d2">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2951.6!2d-83.7483!3d42.2798!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x883cae46c0aa76db%3A0x1!2s118+S+Main+St%2C+Ann+Arbor%2C+MI+48104!5e0!3m2!1sen!2sus!4v1"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-            title="Mynt House Cafe location on Google Maps"
-          ></iframe>
+        <div class="ig-embed">
+          <iframe src="https://www.instagram.com/reel/DMprcDeMmJ2/embed/" loading="lazy" allowtransparency="true" scrolling="no" title="Mynt House Instagram reel"></iframe>
+        </div>
+        <div class="ig-embed">
+          <iframe src="https://www.instagram.com/p/DNTE6UWuFO6/embed/" loading="lazy" allowtransparency="true" scrolling="no" title="Mynt House Instagram post"></iframe>
         </div>
       </div>
-    </section>
-  </main>
-
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="footer-brand">mynt house</div>
-    <p class="footer-address">118 s main st, ann arbor, mi 48104</p>
-
-    <div class="footer-social">
-      <a href="https://instagram.com/mynthousecafe" target="_blank" rel="noopener" aria-label="Instagram">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-          <rect x="2" y="2" width="20" height="20" rx="5"/>
-          <circle cx="12" cy="12" r="5"/>
-          <circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/>
-        </svg>
-      </a>
-      <a href="https://mynthousecafe.com" target="_blank" rel="noopener" aria-label="Website">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-          <circle cx="12" cy="12" r="10"/>
-          <path d="M2 12h20"/>
-          <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
-        </svg>
-      </a>
-      <a href="tel:+17344923987" aria-label="Phone">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.88.37 1.85.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.96.33 1.93.57 2.81.7A2 2 0 0 1 22 16.92z"/>
-        </svg>
-      </a>
+      <div style="text-align:center;margin-top:2.2rem;">
+        <a href="https://www.instagram.com/mynthousecafe/" target="_blank" rel="noopener" class="btn btn-maroon">Follow @mynthousecafe</a>
+      </div>
     </div>
+  </section>
 
-    <p class="footer-tagline">michigan's first moroccan café</p>
+  <!-- ============ VISIT ============ -->
+  <section class="section bg-mynt" id="visit" style="background:var(--ultra);">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <span class="kicker">Find Us</span>
+        <h2>Come sit a while.</h2>
+      </div>
+      <div class="find-grid">
+        <div class="reveal d1">
+          <h3 style="font-family:var(--font-display);font-size:1.5rem;margin-bottom:.4rem;">Hours</h3>
+          <table class="hours-table" aria-label="Opening hours">
+            <tbody>
+              <tr data-day="1"><td>Monday</td><td>8 AM &ndash; Midnight</td></tr>
+              <tr data-day="2"><td>Tuesday</td><td>8 AM &ndash; Midnight</td></tr>
+              <tr data-day="3"><td>Wednesday</td><td>8 AM &ndash; Midnight</td></tr>
+              <tr data-day="4"><td>Thursday</td><td>8 AM &ndash; Midnight</td></tr>
+              <tr data-day="5"><td>Friday</td><td>8 AM &ndash; Midnight</td></tr>
+              <tr data-day="6"><td>Saturday</td><td>8 AM &ndash; Midnight</td></tr>
+              <tr data-day="0"><td>Sunday</td><td>8 AM &ndash; Midnight</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="find-card reveal d2">
+          <h3>mynt house</h3>
+          <p style="color:var(--muted);font-size:.9rem;margin:.2rem 0 1rem;">Michigan's First Moroccan Caf&eacute; &middot; 100% Halal</p>
+          <div class="find-line">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 12-9 12s-9-5-9-12a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <a href="https://www.google.com/maps/search/?api=1&query=mynt+house+cafe+118+S+Main+St+Ann+Arbor" target="_blank" rel="noopener">118 S Main St,<br>Ann Arbor, MI 48104</a>
+          </div>
+          <div class="find-line">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.9v3a2 2 0 01-2.2 2 19.8 19.8 0 01-8.6-3.1 19.5 19.5 0 01-6-6 19.8 19.8 0 01-3.1-8.7A2 2 0 014.1 2h3a2 2 0 012 1.7c.1.9.3 1.8.6 2.6a2 2 0 01-.5 2.1L8.1 9.9a16 16 0 006 6l1.5-1.1a2 2 0 012.1-.5c.8.3 1.7.5 2.6.6a2 2 0 011.7 2z"/></svg>
+            <a href="tel:+17344923987">(734) 492-3987</a>
+          </div>
+          <div class="find-line">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+            <a href="https://www.instagram.com/mynthousecafe/" target="_blank" rel="noopener">@mynthousecafe</a>
+          </div>
+          <div class="amen">
+            <span class="tag">100% Halal</span>
+            <span class="tag">Three floors</span>
+            <span class="tag">Riad-inspired</span>
+            <span class="tag">Open late</span>
+            <span class="tag">Downtown A2</span>
+          </div>
+          <div class="find-cta">
+            <a href="https://www.google.com/maps/search/?api=1&query=mynt+house+cafe+118+S+Main+St+Ann+Arbor" target="_blank" rel="noopener" class="btn btn-mynt">Directions</a>
+            <a href="tel:+17344923987" class="btn btn-ghost">Call Us</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <div class="footer-bottom">
-      <span>&copy; 2024 mynt house cafe</span>
-      <a href="https://ranastudio.com" target="_blank" rel="noopener">site by rana studio</a>
+  <!-- ============ FOOTER ============ -->
+  <footer>
+    <div class="wrap">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <b>mynt house</b>
+          <p>Michigan's first Moroccan caf&eacute;. A three-floor riad on Main Street in downtown Ann Arbor.</p>
+        </div>
+        <div class="footer-links">
+          <div>
+            <h4>Explore</h4>
+            <a href="#story">Our Story</a>
+            <a href="#signatures">Signatures</a>
+            <a href="#menu">Menu</a>
+            <a href="#gallery">Gallery</a>
+          </div>
+          <div>
+            <h4>Visit</h4>
+            <span>118 S Main St</span>
+            <span>Ann Arbor, MI 48104</span>
+            <a href="tel:+17344923987">(734) 492-3987</a>
+            <a href="https://www.instagram.com/mynthousecafe/" target="_blank" rel="noopener">@mynthousecafe</a>
+          </div>
+          <div>
+            <h4>Hours</h4>
+            <span>Every day</span>
+            <span>8 AM &ndash; Midnight</span>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; <span id="year"></span> mynt house &middot; Ann Arbor, MI. All rights reserved.</span>
+        <span>Made with <span class="heart">&hearts;</span> by <a href="#">Rana Studio</a></span>
+      </div>
     </div>
   </footer>
 
-  <script>
-    // Splash curtain
-    window.addEventListener('load', () => {
-      setTimeout(() => document.querySelector('.splash').classList.add('gone'), 1800);
-    });
+  <!-- ============ LIGHTBOX ============ -->
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lightbox-close" aria-label="Close image">&times;</button>
+    <img src="" alt="" id="lightbox-img" />
+  </div>
 
-    // Custom cursor (desktop only)
-    const dot = document.querySelector('.cursor-dot');
-    if (window.matchMedia('(pointer: fine)').matches) {
-      let mx = 0, my = 0, dx = 0, dy = 0;
-      document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; dot.classList.add('visible'); });
-      document.addEventListener('mouseleave', () => dot.classList.remove('visible'));
-      (function loop() {
-        dx += (mx - dx) * .15;
-        dy += (my - dy) * .15;
-        dot.style.left = dx + 'px';
-        dot.style.top = dy + 'px';
-        requestAnimationFrame(loop);
-      })();
-      document.querySelectorAll('a, button, .rail-card').forEach(el => {
-        el.addEventListener('mouseenter', () => dot.classList.add('hover'));
-        el.addEventListener('mouseleave', () => dot.classList.remove('hover'));
+  <!-- ============ SCHEMA.ORG ============ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CafeOrCoffeeShop",
+    "name": "Mynt House",
+    "description": "Michigan's first Moroccan café. A three-floor riad-inspired halal coffeehouse on Main Street in downtown Ann Arbor serving Moroccocino, shakshuka, Moroccan mint tea and French pastries.",
+    "image": "img/cover.png",
+    "telephone": "+1-734-492-3987",
+    "url": "https://www.instagram.com/mynthousecafe/",
+    "servesCuisine": ["Moroccan", "Coffee", "Cafe", "Halal"],
+    "priceRange": "$$",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "118 S Main St",
+      "addressLocality": "Ann Arbor",
+      "addressRegion": "MI",
+      "postalCode": "48104",
+      "addressCountry": "US"
+    },
+    "geo": { "@type": "GeoCoordinates", "latitude": 42.2796, "longitude": -83.7488 },
+    "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.7", "reviewCount": "200" },
+    "openingHoursSpecification": [
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"], "opens": "08:00", "closes": "00:00" }
+    ],
+    "sameAs": ["https://www.instagram.com/mynthousecafe/"]
+  }
+  </script>
+
+  <!-- ============ JS ============ -->
+  <script>
+  (function () {
+    var dismiss = function(){ document.body.classList.add('loaded'); };
+    window.addEventListener('load', function(){ setTimeout(dismiss, 2700); });
+    setTimeout(dismiss, 4200);
+
+    var y = document.getElementById('year');
+    if (y) { try { y.textContent = new Date().getFullYear(); } catch(e){ y.textContent = '2026'; } }
+
+    try {
+      var todayIdx = new Date().getDay();
+      var row = document.querySelector('.hours-table tr[data-day="' + todayIdx + '"]');
+      if (row) row.classList.add('today');
+    } catch (e) {}
+
+    var header = document.getElementById('header');
+    var onScroll = function () { header.classList.toggle('scrolled', window.scrollY > 60); };
+    onScroll(); window.addEventListener('scroll', onScroll, { passive: true });
+
+    var toggle = document.getElementById('nav-toggle');
+    var nav = document.getElementById('site-nav');
+    if (toggle && nav) {
+      toggle.addEventListener('click', function () {
+        var open = nav.classList.toggle('open');
+        toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+      nav.querySelectorAll('a').forEach(function (a) {
+        a.addEventListener('click', function () {
+          nav.classList.remove('open');
+          toggle.setAttribute('aria-expanded', 'false');
+        });
       });
     }
 
-    // Scroll-aware nav
-    const nav = document.querySelector('.nav');
-    window.addEventListener('scroll', () => {
-      nav.classList.toggle('scrolled', scrollY > 60);
-    }, { passive: true });
-
-    // Reveal on scroll
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(e => {
-        if (e.isIntersecting) { e.target.classList.add('visible'); observer.unobserve(e.target); }
+    var fine = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+    if (fine) {
+      var cur = document.getElementById('cursor');
+      window.addEventListener('mousemove', function (e) {
+        cur.classList.add('show');
+        cur.style.left = e.clientX + 'px';
+        cur.style.top = e.clientY + 'px';
+      }, { passive: true });
+      document.querySelectorAll('a, button, .sig, .gallery figure, .ig-embed').forEach(function (el) {
+        el.addEventListener('mouseenter', function () { cur.classList.add('big'); });
+        el.addEventListener('mouseleave', function () { cur.classList.remove('big'); });
       });
-    }, { threshold: .12, rootMargin: '0px 0px -40px 0px' });
-    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    }
 
-    // Drag rail
-    const rail = document.querySelector('.rail');
-    let isDown = false, startX, scrollLeft;
-    rail.addEventListener('mousedown', e => {
-      isDown = true; rail.style.cursor = 'grabbing';
-      startX = e.pageX - rail.offsetLeft;
-      scrollLeft = rail.scrollLeft;
+    var rail = document.getElementById('rail');
+    if (rail) {
+      var down = false, startX, startScroll, moved = false;
+      rail.addEventListener('mousedown', function (e) { down = true; moved = false; rail.classList.add('drag'); startX = e.pageX; startScroll = rail.scrollLeft; });
+      window.addEventListener('mouseup', function () { down = false; rail.classList.remove('drag'); });
+      rail.addEventListener('mouseleave', function () { down = false; rail.classList.remove('drag'); });
+      rail.addEventListener('mousemove', function (e) {
+        if (!down) return;
+        var dx = e.pageX - startX;
+        if (Math.abs(dx) > 4) moved = true;
+        rail.scrollLeft = startScroll - dx;
+      });
+      rail.querySelectorAll('a').forEach(function (a) {
+        a.addEventListener('click', function (e) { if (moved) { e.preventDefault(); } });
+      });
+    }
+
+    var lb = document.getElementById('lightbox');
+    var lbImg = document.getElementById('lightbox-img');
+    document.querySelectorAll('#gallery-grid img').forEach(function (img) {
+      img.addEventListener('click', function () {
+        lbImg.src = img.src; lbImg.alt = img.alt;
+        lb.classList.add('open'); lb.setAttribute('aria-hidden', 'false');
+      });
     });
-    rail.addEventListener('mouseleave', () => { isDown = false; rail.style.cursor = 'grab'; });
-    rail.addEventListener('mouseup', () => { isDown = false; rail.style.cursor = 'grab'; });
-    rail.addEventListener('mousemove', e => {
-      if (!isDown) return;
-      e.preventDefault();
-      const x = e.pageX - rail.offsetLeft;
-      rail.scrollLeft = scrollLeft - (x - startX) * 1.8;
-    });
+    if (lb) {
+      lb.addEventListener('click', function () { lb.classList.remove('open'); lb.setAttribute('aria-hidden', 'true'); });
+      document.addEventListener('keydown', function (e) { if (e.key === 'Escape') { lb.classList.remove('open'); lb.setAttribute('aria-hidden', 'true'); } });
+    }
+
+    var reveals = document.querySelectorAll('.reveal');
+    if (!('IntersectionObserver' in window)) { reveals.forEach(function (el) { el.classList.add('visible'); }); return; }
+    var obs = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) { if (en.isIntersecting) { en.target.classList.add('visible'); obs.unobserve(en.target); } });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    reveals.forEach(function (el) { obs.observe(el); });
+  })();
   </script>
-
 </body>
 </html>
