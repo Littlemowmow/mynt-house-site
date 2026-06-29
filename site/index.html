@@ -170,20 +170,16 @@
       padding: .9rem 2.5rem;
     }
     .nav-logo {
-      height: 36px;
+      height: 40px;
       width: auto;
       transition: filter .4s ease;
+      filter: brightness(0) invert(1);
     }
     .nav.scrolled .nav-logo { filter: none; }
     .nav-brand {
-      font-family: var(--font-display);
-      font-size: 1.4rem;
-      font-weight: 400;
-      letter-spacing: .05em;
-      color: var(--gold-lt);
-      transition: color .4s ease;
+      display: flex;
+      align-items: center;
     }
-    .nav.scrolled .nav-brand { color: var(--navy); }
     .nav-links {
       display: flex; gap: 2.2rem;
       list-style: none;
@@ -555,6 +551,96 @@
       color: var(--muted);
     }
 
+    /* ---------- INSTAGRAM FEED ---------- */
+    .ig-section {
+      padding: 5rem 2rem 4rem;
+      background: var(--surf);
+      position: relative;
+    }
+    .ig-section::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 1px;
+      background: linear-gradient(to right, transparent, var(--gold-lt), transparent);
+    }
+    .ig-header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    .ig-header h2 {
+      font-family: var(--font-display);
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      font-weight: 300;
+      color: var(--navy);
+    }
+    .ig-header h2 em {
+      font-style: italic;
+      color: var(--terra);
+      font-weight: 400;
+    }
+    .ig-header .ig-handle {
+      display: inline-flex;
+      align-items: center;
+      gap: .5rem;
+      margin-top: 1rem;
+      font-size: .78rem;
+      font-weight: 500;
+      letter-spacing: .08em;
+      color: var(--navy-mid);
+      border-bottom: 1px solid var(--gold-lt);
+      padding-bottom: 2px;
+      transition: color .3s;
+    }
+    .ig-header .ig-handle:hover { color: var(--terra); }
+    .ig-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+    .ig-grid .ig-embed {
+      border-radius: var(--r-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      background: var(--card);
+      transition: transform .4s, box-shadow .4s;
+    }
+    .ig-grid .ig-embed:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-gold);
+    }
+    .ig-grid .ig-embed iframe {
+      width: 100%;
+      min-height: 480px;
+      border: none;
+      display: block;
+    }
+    .ig-featured {
+      max-width: 540px;
+      margin: 0 auto 2rem;
+      border-radius: var(--r-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+      background: var(--card);
+    }
+    .ig-featured iframe {
+      width: 100%;
+      min-height: 680px;
+      border: none;
+      display: block;
+    }
+    @media (max-width: 900px) {
+      .ig-grid { grid-template-columns: 1fr 1fr; }
+    }
+    @media (max-width: 640px) {
+      .ig-grid { grid-template-columns: 1fr; max-width: 400px; }
+      .ig-section { padding: 3.5rem 1.5rem; }
+      .ig-featured iframe { min-height: 560px; }
+      .ig-grid .ig-embed iframe { min-height: 420px; }
+    }
+
     /* ---------- MENU ---------- */
     .menu {
       padding: 5rem 2rem 6rem;
@@ -859,7 +945,7 @@
 
   <!-- NAV -->
   <nav class="nav" role="navigation" aria-label="Main navigation">
-    <a href="#" class="nav-brand">mynt house</a>
+    <a href="#" class="nav-brand"><img src="img/logo.png" alt="Mynt House" class="nav-logo" /></a>
     <ul class="nav-links">
       <li><a href="#story">Story</a></li>
       <li><a href="#space">Space</a></li>
@@ -1003,6 +1089,30 @@
         </figure>
       </div>
       <p class="rail-hint">drag to explore →</p>
+    </section>
+
+    <!-- INSTAGRAM FEED -->
+    <section class="ig-section" id="instagram">
+      <div class="ig-header">
+        <p class="section-label reveal">From the Feed</p>
+        <h2 class="reveal reveal-d1">follow the <em>journey</em></h2>
+        <a href="https://instagram.com/mynthousecafe" target="_blank" rel="noopener" class="ig-handle reveal reveal-d2">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
+          @mynthousecafe
+        </a>
+      </div>
+
+      <div class="ig-grid">
+        <div class="ig-embed reveal reveal-d1">
+          <iframe src="https://www.instagram.com/reel/DNs0FelWmm6/embed/" loading="lazy" allowtransparency="true" scrolling="no" title="Mynt House Instagram — the vibe"></iframe>
+        </div>
+        <div class="ig-embed reveal reveal-d2">
+          <iframe src="https://www.instagram.com/reel/DMprcDeMmJ2/embed/" loading="lazy" allowtransparency="true" scrolling="no" title="Mynt House Instagram reel"></iframe>
+        </div>
+        <div class="ig-embed reveal reveal-d3">
+          <iframe src="https://www.instagram.com/p/DNTE6UWuFO6/embed/" loading="lazy" allowtransparency="true" scrolling="no" title="Mynt House Instagram — fresh waffles"></iframe>
+        </div>
+      </div>
     </section>
 
     <!-- MARQUEE 2 -->
